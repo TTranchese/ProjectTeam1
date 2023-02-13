@@ -1,3 +1,5 @@
+package it.project1.utils.character_aspect;
+
 public class ClothingStyle {
     private String clothStyle;
     private String clothColor;

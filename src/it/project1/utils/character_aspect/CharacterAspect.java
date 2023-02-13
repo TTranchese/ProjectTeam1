@@ -1,3 +1,5 @@
+package it.project1.utils.character_aspect;
+
 public class CharacterAspect {
     private String gender;
     private HairStyle hair;
@@ -6,6 +8,15 @@ public class CharacterAspect {
     private BodyStyle body;
     private ClothingStyle cloth;
 
+    /**
+     * Constructor
+     * @param gender
+     * @param hair
+     * @param face
+     * @param voice
+     * @param body
+     * @param cloth
+     */
     public CharacterAspect(String gender, HairStyle hair, FaceStyle face, VoiceStyle voice, BodyStyle body, ClothingStyle cloth) {
         this.gender = gender;
         this.hair = hair;

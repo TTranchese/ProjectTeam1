@@ -1,3 +1,7 @@
+package it.project1.entities;
+
+import it.project1.utils.character_aspect.CharacterAspect;
+
 /**
  * TODO list of things commented
  * {@code @Account}
