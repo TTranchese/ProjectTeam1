@@ -1,3 +1,7 @@
+package it.project1.utils;
+
+import it.project1.entities.Character;
+
 import java.util.List;
 
 /**

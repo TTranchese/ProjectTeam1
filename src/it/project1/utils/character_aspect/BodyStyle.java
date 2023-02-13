@@ -1,3 +1,5 @@
+package it.project1.utils.character_aspect;
+
 public class BodyStyle {
     private String bodyStyle;
     private String skinTone;
