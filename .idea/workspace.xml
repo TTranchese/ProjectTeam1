@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="prova caricamento">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monster/Ability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/Ability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/Ability.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/BirdMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/BirdMonster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/Elements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/MoveSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MoveSet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +67,14 @@
       <option name="presentableId" value="Default" />
       <updated>1675330747415</updated>
     </task>
+    <task id="LOCAL-00001" summary="prova caricamento">
+      <created>1676279051647</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676279051647</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,5 +87,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="prova caricamento" />
+    <option name="LAST_COMMIT_MESSAGE" value="prova caricamento" />
   </component>
 </project>
