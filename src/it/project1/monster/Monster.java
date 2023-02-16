@@ -1,7 +1,7 @@
 /**
  * @author Figuccia
  */
-package monster;
+package it.project1.monster;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -110,7 +110,7 @@ public abstract class Monster implements Rideable {
 
     @Override
     public void ride() {
-        System.out.println("Riding the monster");
+        System.out.println("Riding the it.project1.monster");
     }
     //metodi astratti per danni e tipo di mostri
     public abstract String getType();

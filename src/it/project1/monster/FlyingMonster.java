@@ -1,4 +1,4 @@
-package monster;
+package it.project1.monster;
 
 public interface FlyingMonster {
     double FLYING_DAMAGE_REDUCTION = 0.05;

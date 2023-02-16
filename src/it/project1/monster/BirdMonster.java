@@ -1,7 +1,7 @@
 /**
  * @author Figuccia
  */
-package monster;
+package it.project1.monster;
 
 public class BirdMonster extends Monster {
     public BirdMonster() {

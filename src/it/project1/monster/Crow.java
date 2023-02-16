@@ -1,10 +1,9 @@
-package monster;
+package it.project1.monster;
 
-public class Condor extends Monster implements FlyingMonster {
-    public Condor(String name, int level, int monsterHealtPoints, int monsterAbilityPoints, int monsterAttack, int monsterDefense) {
+public class Crow extends Monster implements FlyingMonster {
+    public Crow(String name, int level, int monsterHealtPoints, int monsterAbilityPoints, int monsterAttack, int monsterDefense) {
         super(name, level, monsterHealtPoints, monsterAbilityPoints, monsterAttack, monsterDefense);
     }
-
     @Override
     public String getType() {
         return "Flying";

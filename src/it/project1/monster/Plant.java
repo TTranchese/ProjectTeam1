@@ -1,4 +1,4 @@
-package monster;
+package it.project1.monster;
 
 public class Plant extends Monster implements ElementalMonster {
 public Plant(String name, int level, int monsterHealtPoints, int monsterAbilityPoints, int monsterAttack, int monsterDefense) {

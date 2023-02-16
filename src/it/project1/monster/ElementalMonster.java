@@ -1,4 +1,4 @@
-package monster;
+package it.project1.monster;
 
 public interface ElementalMonster {
     double ELEMENTAL_DAMAGE_REDUCTION = 0.5;

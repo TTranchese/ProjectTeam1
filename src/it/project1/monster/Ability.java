@@ -1,4 +1,4 @@
-package monster;
+package it.project1.monster;
 
 public interface Ability {
     String getName();

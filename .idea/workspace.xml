@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="prova caricamento">
+    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="incompleto. aggiunte classi, modificate interfacce">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monster/Ability.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monster/BirdMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/BirdMonster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monster/Elements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monster/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/Monster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monster/MoveSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MoveSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BodyStyle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CharacterAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CharacterSystemManaging.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClothingStyle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FaceStyle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HairStyle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VoiceStyle.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676279051647</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="incompleto. aggiunte classi, modificate interfacce">
+      <created>1676537736289</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676537736289</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,6 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="prova caricamento" />
-    <option name="LAST_COMMIT_MESSAGE" value="prova caricamento" />
+    <MESSAGE value="incompleto. aggiunte classi, modificate interfacce" />
+    <option name="LAST_COMMIT_MESSAGE" value="incompleto. aggiunte classi, modificate interfacce" />
   </component>
 </project>

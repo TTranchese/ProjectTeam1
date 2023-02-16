@@ -1,4 +1,4 @@
-package monster;
+package it.project1.monster;
 
 import java.util.ArrayList;
 import java.util.Collections;
