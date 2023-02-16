@@ -6,15 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="incompleto. aggiunte classi, modificate interfacce">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BodyStyle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CharacterAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CharacterSystemManaging.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothingStyle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FaceStyle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HairStyle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VoiceStyle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BodyStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/project1/utils/character_aspect/BodyStyle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/project1/entities/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CharacterAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/project1/utils/character_aspect/CharacterAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CharacterSystemManaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/project1/utils/CharacterSystemManaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClothingStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/project1/utils/character_aspect/ClothingStyle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FaceStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/project1/utils/character_aspect/FaceStyle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HairStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/project1/utils/character_aspect/HairStyle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VoiceStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/project1/utils/character_aspect/VoiceStyle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +53,11 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;
   }
 }</component>
   <component name="RecentsManager">
