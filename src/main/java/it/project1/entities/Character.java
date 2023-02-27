@@ -4,8 +4,8 @@ import it.project1.utils.character_aspect.CharacterAspect;
 
 /**
  * TODO list of things commented
- * {@code @Account}
- * @author Tommaso
+ * {@code @Character}
+ * @author TTranchese
  */
 public class Character {
 	private String name;

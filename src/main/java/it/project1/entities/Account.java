@@ -1,6 +1,10 @@
 package it.project1.entities;
 
-
+/**
+ * TODO list of things commented
+ * {@code @Account}
+ * @author TTranchese
+ */
 public class Account {
 	private String name;
 	private String password;
