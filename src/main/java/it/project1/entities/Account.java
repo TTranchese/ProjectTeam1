@@ -1,23 +1,22 @@
 package it.project1.entities;
 
-import it.project1.utils.CharacterSystemManaging;
-
-
+/**
+ * TODO list of things commented
+ * {@code @Account}
+ * @author TTranchese
+ */
 public class Account {
 	private String name;
 	private String password;
-	private CharacterSystemManaging characterList;
 
 	/**
 	 * Constructor
 	 * @param name
 	 * @param password
-	 * @param characterList
 	 */
-	public Account(String name, String password, CharacterSystemManaging characterList) {
+	public Account(String name, String password) {
 		this.name = name;
 		this.password = password;
-		this.characterList = characterList;
 	}
 	//Setter and Getter
 	public String getName() {
@@ -34,13 +33,5 @@ public class Account {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public CharacterSystemManaging getCharacterList() {
-		return characterList;
-	}
-
-	public void setCharacterList(CharacterSystemManaging characterList) {
-		this.characterList = characterList;
 	}
 }

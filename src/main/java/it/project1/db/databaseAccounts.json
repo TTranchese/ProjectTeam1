@@ -1,3 +1,14 @@
-{"tommaso":"tommaso-1",
-  "mirco":"mirco-1",
-  "giuseppe":"giuseppe-1"}
+[
+  {
+    "accountId": "tommaso",
+    "password": "tommaso-1"
+  },
+  {
+    "accountId": "mirco",
+    "password": "mirco-1"
+  },
+  {
+    "accountId": "giuseppe",
+    "password": "giuseppe-1"
+  }
+]
