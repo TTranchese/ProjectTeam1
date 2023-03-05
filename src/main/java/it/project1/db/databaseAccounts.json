@@ -1,14 +1,17 @@
 [
   {
-    "accountId": "tommaso",
+    "id": "3",
+    "name": "tommaso",
     "password": "tommaso-1"
   },
   {
-    "accountId": "mirco",
+    "id": "1",
+    "name": "mirco",
     "password": "mirco-1"
   },
   {
-    "accountId": "giuseppe",
+    "id": "2",
+    "name": "giuseppe",
     "password": "giuseppe-1"
   }
 ]
