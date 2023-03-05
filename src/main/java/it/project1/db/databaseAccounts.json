@@ -2,16 +2,19 @@
   {
     "id": "3",
     "name": "tommaso",
-    "password": "tommaso-1"
+    "password": "tommaso-1",
+    "characterList": ["c001", "c002"]
   },
   {
     "id": "1",
     "name": "mirco",
-    "password": "mirco-1"
+    "password": "mirco-1",
+    "characterList": ["c003", "c004"]
   },
   {
     "id": "2",
     "name": "giuseppe",
-    "password": "giuseppe-1"
+    "password": "giuseppe-1",
+    "characterList": ["c005", "c006"]
   }
 ]
