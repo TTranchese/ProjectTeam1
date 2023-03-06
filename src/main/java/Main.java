@@ -5,7 +5,6 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -27,7 +26,8 @@ public class Main {
 				String id = jsonObject.getString("id");
 				String name = jsonObject.getString("name");
 				String password = jsonObject.getString("password");
-				accounts.add(new Account(id, name, password));
+				JSONArray characterList = jsonObject.getJSONArray("characterList");
+				accounts.add(new Account(id, name, password, characterList));
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -42,7 +42,7 @@ public class Main {
 		String password = sc.next();
 		for (Account account : accounts) {
 			if (account.getName().equals(name) && account.getPassword().equals(password)) {
-				loggedAccount = new Account(account.getId(), account.getName(), account.getPassword());
+				loggedAccount = new Account(account.getId(), account.getName(), account.getPassword(), account.getCharacterList());
 			}
 		}
 	}
@@ -50,5 +50,6 @@ public class Main {
 	public static void main(String[] args) {
 		loadAccountDb();
 		logInAccount();
+		System.out.println(loggedAccount.getCharacterList());
 	}
 }

@@ -1,6 +1,7 @@
 package it.project1.entities;
 
-import java.util.List;
+import org.json.JSONArray;
+
 import java.util.Scanner;
 
 /**
@@ -13,15 +14,15 @@ public class Account {
 	private String id;
 	private String name;
 	private String password;
-	private List<Character> characterList;
+	private JSONArray characterList;
 
 	public Account() {}
 
-	public Account(String id, String name, String password) {
+	public Account(String id, String name, String password, JSONArray characterList) {
 		this.id = id;
 		this.name = name;
 		this.password = password;
-		//TODO setup the characterlist trough a function that retrieves the characters
+		this.characterList = characterList;
 	}
 
 	//Setter and Getter
@@ -48,6 +49,13 @@ public class Account {
 	public void setId(String id) {
 		this.id = id;
 	}
+	public JSONArray getCharacterList() {
+		return characterList;
+	}
+
+	public void setCharacterList(JSONArray characterList) {
+		this.characterList = characterList;
+	}
 	public void resetPassword() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Current password: ");
@@ -59,6 +67,4 @@ public class Account {
 			System.out.println("Wrong password.");
 		}
 	}
-
-	//TODO Create a function to retrieve the list of the Characters that belongs to the account based on the id
 }
