@@ -4,11 +4,9 @@ public class Plant extends Monster implements ElementalMonster {
 public Plant(String name, int level, int monsterHealtPoints, int monsterAbilityPoints, int monsterAttack, int monsterDefense) {
         super(name, level, monsterHealtPoints, monsterAbilityPoints, monsterAttack, monsterDefense);
         }
-//@TODO modificare questa funzione
 @Override
-public Element getElement() {
-        return null; // cambiamento qui, prima era Element.Ground; // non funzionava
-        }
+public String getElement() {
+        return "Ground";        }
 
 @Override
 public String getType() {

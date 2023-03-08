@@ -30,16 +30,17 @@ public abstract class Monster implements Rideable {
         }
         this.id = nextIdByType.get(type);
         nextIdByType.put(type, this.id + 1);
-        this.name = this.name;
-        this.level = this.level;
-        this.monsterHealtPoints = this.monsterHealtPoints;
-        this.monsterAbilityPoints = this.monsterAbilityPoints;
-        this.monsterAttack = this.monsterAttack;
-        this.monsterDefense = this.monsterDefense;
+        this.name = name;
+        this.level = level;
+        this.monsterHealtPoints = monsterHealtPoints;
+        this.monsterAbilityPoints = monsterAbilityPoints;
+        this.monsterAttack = monsterAttack;
+        this.monsterDefense = monsterDefense;
         this.abilities = new ArrayList<>();
         this.moveSet = new MoveSet();
     }
-//getter e setter dei vari valori
+
+    //getter e setter dei vari valori
     public int getId() {
         return id;
     }
