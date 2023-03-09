@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="incompleto. aggiunte classi, modificate interfacce">
+    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/GroundElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_2023_19_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_2023_19_12__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/db/databaseAccounts.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/db/databaseAccounts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/entities/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Ability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/Ability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/BirdMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/BirdMonster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/ElementalMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/ElementalMonster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/GroungElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/Plant.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="prova caricamento" />
     <MESSAGE value="incompleto. aggiunte classi, modificate interfacce" />
-    <option name="LAST_COMMIT_MESSAGE" value="incompleto. aggiunte classi, modificate interfacce" />
+    <MESSAGE value="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati" />
   </component>
 </project>
