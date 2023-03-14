@@ -8,7 +8,7 @@ public class Weapon extends  Item implements IRequirments, ISellable{
     int attackSpeed;
     int criticalChance;
 
-    public Weapon(String name, String description, int value, int weight, String rarity, int requirments, boolean isStackable, int durability, String type, int damage, int range, int attackSpeed, int criticalChance) {
+    public Weapon(String name, String description, int value, double weight, String rarity, int requirments, boolean isStackable, int durability, String type, int damage, int range, int attackSpeed, int criticalChance) {
         super(name, description, value, weight, rarity, requirments, isStackable,durability);
         this.type = type;
         this.damage = damage;
