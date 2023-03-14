@@ -5,7 +5,7 @@ public class Consumables extends  Item implements IUsable{
     int duration;
     int cooldown;
 
-    public Consumables(String name, String description, int value, int weight, String rarity, int requirments, boolean isStackable, int durability, String effect, int duration, int cooldown) {
+    public Consumables(String name, String description, int value, double weight, String rarity, int requirments, boolean isStackable, int durability, String effect, int duration, int cooldown) {
         super(name, description, value, weight, rarity, requirments, isStackable, durability);
         this.effect = effect;
         this.duration = duration;
