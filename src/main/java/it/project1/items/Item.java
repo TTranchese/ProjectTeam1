@@ -5,13 +5,13 @@ public abstract class Item {
     String name;
     String description;
     int value;
-    int weight;
+    double weight;
     String rarity;
     int requirments;
     int durability;
     boolean isStackable;
 
-    public Item(String name, String description, int value, int weight, String rarity, int requirments, boolean isStackable, int durability) {
+    public Item(String name, String description, int value, double weight, String rarity, int requirments, boolean isStackable, int durability) {
         this.name = name;
         this.description = description;
         this.value = value;
@@ -50,11 +50,11 @@ public abstract class Item {
         this.value = value;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
