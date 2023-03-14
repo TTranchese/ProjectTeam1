@@ -6,7 +6,7 @@ public class Armor extends Item implements IRequirments,ISellable {
     int defense;
     int elementalDefense;
 
-    public Armor(String name, String description, int value, int weight, String rarity, int requirments, boolean isStackable, int durability, String type, int defense, int elementalDefense) {
+    public Armor(String name, String description, int value, double weight, String rarity, int requirments, boolean isStackable, int durability, String type, int defense, int elementalDefense) {
         super(name, description, value, weight, rarity, requirments, isStackable, durability);
         this.type = type;
         this.defense = defense;
