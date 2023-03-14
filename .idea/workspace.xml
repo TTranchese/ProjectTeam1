@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="aggiunto un fac simile di shop">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_2023_19_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_2023_19_12__Changes_.xml" afterDir="false" />
+    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="Aggiunto fac simile negozio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/shop.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +100,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="it.project1.shop" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="it.project1.entities" />
     </key>
@@ -171,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675330747415</updated>
       <workItem from="1678701025280" duration="3775000" />
-      <workItem from="1678727594494" duration="5469000" />
+      <workItem from="1678727594494" duration="6431000" />
     </task>
     <task id="LOCAL-00001" summary="prova caricamento">
       <created>1676279051647</created>
@@ -201,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678705032722</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Aggiunto fac simile negozio">
+      <created>1678738826490</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678738826490</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +230,7 @@
     <MESSAGE value="incompleto. aggiunte classi, modificate interfacce" />
     <MESSAGE value="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati" />
     <MESSAGE value="aggiunto un fac simile di shop" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunto un fac simile di shop" />
+    <MESSAGE value="Aggiunto fac simile negozio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto fac simile negozio" />
   </component>
 </project>
