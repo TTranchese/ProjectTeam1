@@ -4,7 +4,7 @@ public class QuestItem extends Item implements IRequirments, ISellable{
 
     int questID;
 
-    public QuestItem(String name, String description, int value, int weight, String rarity, int requirments, boolean isStackable,int durability, int questID) {
+    public QuestItem(String name, String description, int value, double weight, String rarity, int requirments, boolean isStackable,int durability, int questID) {
         super(name, description, value, weight, rarity, requirments, isStackable,durability);
         this.questID = questID;
     }
