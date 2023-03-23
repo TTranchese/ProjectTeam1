@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati" />
+    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/project1/account/AccountEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/account/Account.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
