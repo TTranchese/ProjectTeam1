@@ -1,31 +1,19 @@
 package it.project1.account;
 
-import org.json.JSONArray;
 
-import java.util.Scanner;
+import java.sql.*;
 
-/**
- * TODO list of things commented
- * {@code @Account}
- *
- * @author TTranchese
- */
-public class Account {
-	private String id;
+public class Account{
+	private int id;
 	private String name;
 	private String password;
-	private JSONArray characterList;
 
-	public Account() {}
-
-	public Account(String id, String name, String password, JSONArray characterList) {
+	public Account(int id, String name, String password) {
 		this.id = id;
 		this.name = name;
 		this.password = password;
-		this.characterList = characterList;
 	}
 
-	//Setter and Getter
 	public String getName() {
 		return name;
 	}
@@ -42,29 +30,12 @@ public class Account {
 		this.password = password;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
-	public JSONArray getCharacterList() {
-		return characterList;
-	}
 
-	public void setCharacterList(JSONArray characterList) {
-		this.characterList = characterList;
-	}
-	public void resetPassword() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Current password: ");
-		String oldPassword = sc.next();
-		if (this.password.equals(oldPassword)) {
-			System.out.println("New password: ");
-			this.password = sc.next();
-		} else {
-			System.out.println("Wrong password.");
-		}
-	}
 }

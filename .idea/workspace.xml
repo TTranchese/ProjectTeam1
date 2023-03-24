@@ -5,45 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_2023_19_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_2023_19_12__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/db/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/db/databaseAccounts.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/db/databaseCharacters.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/entities/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/character/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/items/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Consumables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/items/Consumables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/IRequirments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/items/IRequirments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/ISellable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/items/ISellable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/IUsable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/items/IUsable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/items/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Junk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/items/Junk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/QuestItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/items/QuestItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/items/Weapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Ability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/Ability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/BirdMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/BirdMonster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Condor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/Condor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Crow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/Crow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Eagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/Eagle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/ElementalMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/ElementalMonster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/FireElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/FireElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/FlyingMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/FlyingMonster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/GroundElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/GroundElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/Monster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterAbilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/MonsterAbilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/MonsterClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MoveSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/MoveSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/NormalMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/NormalMonster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/Plant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Rideable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/monster/Rideable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/utils/character_aspect/BodyStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/character/character_aspect/BodyStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/utils/character_aspect/CharacterAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/character/character_aspect/CharacterAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/utils/character_aspect/ClothingStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/character/character_aspect/ClothingStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/utils/character_aspect/FaceStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/character/character_aspect/FaceStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/utils/character_aspect/HairStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/character/character_aspect/HairStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/utils/character_aspect/VoiceStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/entities/character/character_aspect/VoiceStyle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/account/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/account/IAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/account/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/set_up_databases.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/set_up_databases.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/it/project1/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/project1/AccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -98,7 +64,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -115,10 +81,25 @@
       <recent name="it.project1.entities" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.AccountTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ProjectTeam1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectTeam1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.project1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.project1" />
+      <option name="MAIN_CLASS_NAME" value="it.project1.AccountTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,8 +114,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.AccountTest" />
         <item itemvalue="JUnit.All in ProjectTeam1" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -164,6 +146,9 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -180,5 +165,16 @@
     <MESSAGE value="incompleto. aggiunte classi, modificate interfacce" />
     <MESSAGE value="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati" />
     <option name="LAST_COMMIT_MESSAGE" value="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/it/project1/AccountTest.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
