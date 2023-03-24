@@ -11,7 +11,6 @@ public class AccountTest {
     @Test
     public void testToVerifyIfAccountExistsOrNot() {
         Account accountToVerify = new Account(1, "DragonSlayer77", "password1");
-        Account accountToCompare = accountToVerify.findAccount();
-        Assert.assertEquals(accountToVerify, accountToCompare);
+        Assert.assertEquals(true, accountToVerify.findAccount());
     }
 }

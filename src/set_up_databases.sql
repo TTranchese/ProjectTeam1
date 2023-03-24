@@ -5,11 +5,11 @@ CREATE DATABASE IF NOT EXISTS mmo;
 \use mmo;
 CREATE TABLE IF NOT EXISTS accounts(
 id INT NOT NULL AUTO_INCREMENT,
-name VARCHAR(255),
+nickName VARCHAR(255),
 password VARCHAR(255),
 PRIMARY KEY(id)
 );
-INSERT INTO accounts (name, password)
+INSERT INTO accounts (nickName, password)
 VALUES
     ('DragonSlayer77', 'password1'),
     ('TheWizard42', 'password2'),

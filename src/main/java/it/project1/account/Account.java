@@ -7,18 +7,6 @@ public class Account implements IAccountRepository{
 	private int id;
 	private String name;
 	private String password;
-	//connetto al database
-	Connection connection;
-	{
-		try {
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mmo", "root", "root");
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
-	}
-
-
-	public Account() {}
 
 	public Account(int id, String name, String password) {
 		this.id = id;
@@ -50,20 +38,32 @@ public class Account implements IAccountRepository{
 		this.id = id;
 	}
 
+
+
+
 	@Override
-	public Account findAccount() {
+	public boolean findAccount() {
+		Connection connection;
 		Statement stm = null;
 		ResultSet resultSet = null;
-		Account returnAccount = null;
-		try {
-			stm = connection.createStatement();
-			String query = "SELECT name, password FROM mmo.accounts WHERE name = "+this.name+" AND password = "+this.password;
-			resultSet = stm.executeQuery(query);
-			returnAccount = new Account(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3) );
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
-		return returnAccount;
+			try {
+				connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mmo", "root", "root");
+				stm = connection.createStatement();
+				String query = "SELECT * FROM mmo.accounts WHERE nickName = '"+this.name+"' AND password = '"+this.password+"'";
+				resultSet = stm.executeQuery(query);
+
+				if ((resultSet.getInt(1)==this.id) && (resultSet.getString(2).equals(this.name))&&(resultSet.getString(3).equals(this.password))){
+					resultSet.close();
+					stm.close();
+					return true;
+				} else{
+					resultSet.close();
+					stm.close();
+					return false;
+				}
+			} catch (SQLException e) {
+				throw new RuntimeException(e);
+			}
 	}
 
 	@Override
