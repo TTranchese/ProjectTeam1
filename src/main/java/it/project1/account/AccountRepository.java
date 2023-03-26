@@ -18,8 +18,6 @@ public class AccountRepository {
 
 	}
 
-	;
-
 	public void createNewAccount(String nickName, String password) {
 		//TODO aggiungere check se il nickname esiste già
 		String createAccountQuery = "INSERT INTO mmo.accounts (nickName, password) VALUES ('" + nickName + "', '" + password + "');";

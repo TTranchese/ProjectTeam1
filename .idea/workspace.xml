@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati">
+    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="add-Items">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/project1/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_2023_19_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_2023_19_12__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/account/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/account/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Armor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Consumables.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/IRequirments.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/ISellable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/IUsable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Junk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/QuestItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Weapon.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,18 +63,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "terminal"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="monster" />
@@ -176,5 +187,9 @@
     <MESSAGE value="incompleto. aggiunte classi, modificate interfacce" />
     <MESSAGE value="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati" />
     <option name="LAST_COMMIT_MESSAGE" value="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
