@@ -18,8 +18,6 @@ public class AccountRepository {
 
 	}
 
-	;
-
 	public void createNewAccount(String nickName, String password) {
 		if(!findAccount(nickName)){
 			String createAccountQuery = "INSERT INTO mmo.accounts (nickName, password) VALUES ('" + nickName + "', '" + password + "');";
