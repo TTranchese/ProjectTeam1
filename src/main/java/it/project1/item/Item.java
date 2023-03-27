@@ -2,6 +2,7 @@ package it.project1.item;
 
 public class Item {
 
+    private int idCharacter;
     private int id;
     private String name;
     private String description;
@@ -15,8 +16,9 @@ public class Item {
     private String subtype1;
     private String subtype2;
 
-    public Item(int id, String name, String description, int value, int weight, String rarity, int requirements, int durability, boolean isStackable, ItemType type, String subtype1, String subtype2) {
+    public Item(int idCharacter, int id, String name, String description, int value, int weight, String rarity, int requirements, int durability, boolean isStackable, ItemType type, String subtype1, String subtype2) {
         this.id = id;
+        this.idCharacter = idCharacter;
         this.name = name;
         this.description = description;
         this.value = value;
@@ -35,6 +37,14 @@ public class Item {
         WEAPON,
         CONSUMABLES,
         JUNK,
+    }
+
+    public int getIdCharacter() {
+        return idCharacter;
+    }
+
+    public void setIdCharacter(int idCharacter) {
+        this.idCharacter = idCharacter;
     }
 
     public int getId() {
