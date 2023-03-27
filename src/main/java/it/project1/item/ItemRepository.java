@@ -19,30 +19,30 @@ public class ItemRepository {
 
     public void addItem(Item item) {
         if (doesItemExist(item.getId())) {
-            System.out.println("Item with ID " + item.getId() + " already exists.");
+            System.out.println("Item with ID " + item.getId() + " already exists, can't add this Item ID.");
             return;
         }
-        String addItemQuery = "INSERT INTO mmo.items (id_character, id, name, description, value, weight," +
-                "rarity, requirements, durability, is_stackable, type, subtype1, subtype2) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String addItemQuery = "INSERT INTO mmo.items (id, name, description, value, weight," +
+                "rarity, requirements, durability, isStackable, type, subtype1, subtype2) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             preparedStatement = connection.prepareStatement(addItemQuery);
-            preparedStatement.setInt(1, item.getIdCharacter());
-            preparedStatement.setInt(2, item.getId());
-            preparedStatement.setString(3, item.getName());
-            preparedStatement.setString(4, item.getDescription());
-            preparedStatement.setInt(5, item.getValue());
-            preparedStatement.setInt(6, item.getWeight());
-            preparedStatement.setString(7, item.getRarity());
-            preparedStatement.setInt(8, item.getRequirements());
-            preparedStatement.setInt(9, item.getDurability());
-            preparedStatement.setBoolean(10, item.isStackable());
-            preparedStatement.setString(11, item.getType().name());
-            preparedStatement.setString(12, item.getSubtype1());
-            preparedStatement.setString(13, item.getSubtype2());
+
+            preparedStatement.setInt(1, item.getId());
+            preparedStatement.setString(2, item.getName());
+            preparedStatement.setString(3, item.getDescription());
+            preparedStatement.setInt(4, item.getValue());
+            preparedStatement.setInt(5, item.getWeight());
+            preparedStatement.setString(6, item.getRarity());
+            preparedStatement.setInt(7, item.getRequirements());
+            preparedStatement.setInt(8, item.getDurability());
+            preparedStatement.setBoolean(9, item.isStackable());
+            preparedStatement.setString(10, item.getType().name());
+            preparedStatement.setString(11, item.getSubtype1());
+            preparedStatement.setString(12, item.getSubtype2());
             preparedStatement.executeUpdate();
         } catch (SQLIntegrityConstraintViolationException e) {
-            throw new RuntimeException("Item with ID " + item.getId() + " already exists.", e);
+            throw new RuntimeException("Item with ID " + item.getId() + " already exist, can't add this Item ID.", e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -51,10 +51,10 @@ public class ItemRepository {
     public void updateItem(Item item) {
         String updateItemQuery = "UPDATE mmo.items " +
                 "SET name = ?, description = ?, value = ?, weight = ?, rarity = ?, requirements = ?, durability = ?, " +
-                "is_stackable = ?, type = ?, subtype1 = ?, subtype2 = ? " +
+                "isStackable = ?, type = ?, subtype1 = ?, subtype2 = ? " +
                 "WHERE id = ?";
         if (!doesItemExist(item.getId())) {
-            System.out.println("Item with ID " + item.getId() + " does not exist.");
+            System.out.println("Item with ID " + item.getId() + " does not exist and can't be Updated.");
             return;
         }
         try {
@@ -73,7 +73,7 @@ public class ItemRepository {
             preparedStatement.setInt(12, item.getId());
             preparedStatement.executeUpdate();
         } catch (SQLIntegrityConstraintViolationException e) {
-            throw new RuntimeException("Item with ID " + item.getId() + " does not exist.", e);
+            throw new RuntimeException("Item with ID " + item.getId() + " does not exist and can't be Updated.", e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -89,14 +89,13 @@ public class ItemRepository {
             resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 item = new Item(
-                        resultSet.getInt("idCharacter"),
                         resultSet.getInt("id"),
                         resultSet.getString("name"),
                         resultSet.getString("description"),
                         resultSet.getInt("value"),
                         resultSet.getInt("weight"),
                         resultSet.getString("rarity"),
-                        resultSet.getInt("requirments"),
+                        resultSet.getInt("requirements"),
                         resultSet.getInt("durability"),
                         resultSet.getBoolean("isStackable"),
                         Item.ItemType.valueOf(resultSet.getString("type")),
@@ -118,7 +117,6 @@ public class ItemRepository {
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Item item = new Item(
-                        resultSet.getInt("id_character"),
                         resultSet.getInt("id"),
                         resultSet.getString("name"),
                         resultSet.getString("description"),
@@ -127,7 +125,7 @@ public class ItemRepository {
                         resultSet.getString("rarity"),
                         resultSet.getInt("requirements"),
                         resultSet.getInt("durability"),
-                        resultSet.getBoolean("is_stackable"),
+                        resultSet.getBoolean("isStackable"),
                         Item.ItemType.valueOf(resultSet.getString("type")),
                         resultSet.getString("subtype1"),
                         resultSet.getString("subtype2")
@@ -142,7 +140,7 @@ public class ItemRepository {
 
     public void deleteItem(int id) {
         if (!doesItemExist(id)) {
-            System.out.println("Item with ID " + id + " does not exist.");
+            System.out.println("The Item with ID " + id + " does not exist and can't be deleted");
             return;
         }
         String deleteItemQuery = "DELETE FROM mmo.items WHERE id = ?";
