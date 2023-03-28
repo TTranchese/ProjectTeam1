@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="add-Items">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/project1/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_2023_19_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_2023_19_12__Changes_.xml" afterDir="false" />
+    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="conversion of items package classes into single class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/account/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/account/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Armor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Consumables.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/IRequirments.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/ISellable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/IUsable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Junk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/QuestItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/items/Weapon.java" beforeDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/item/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/item/ItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/set_up_databases.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/set_up_databases.sql" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -70,10 +63,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "terminal"
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -87,59 +81,97 @@
       <recent name="it.project1.entities.character" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="it.project1.item" />
       <recent name="it.project1.entities" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.it.project1.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="ProjectTeam1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="it.project1.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.project1.Main" />
+  <component name="RunManager" selected="JUnit.ItemRepositoryTest">
+    <configuration name="ItemRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjectTeam1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="it.project1.*" />
+          <option name="PATTERN" value="it.project1.item.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjectTeam1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="it.project1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="it.project1" />
-      <option name="MAIN_CLASS_NAME" value="it.project1.AccountTest" />
+      <option name="PACKAGE_NAME" value="it.project1.item" />
+      <option name="MAIN_CLASS_NAME" value="it.project1.item.ItemRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in ProjectTeam1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ItemRepositoryTest.testAddItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjectTeam1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.project1.item.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.project1.item" />
+      <option name="MAIN_CLASS_NAME" value="it.project1.item.ItemRepositoryTest" />
+      <option name="METHOD_NAME" value="testAddItem" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemRepositoryTest.testGetAllItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectTeam1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.project1.item.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.project1.item" />
+      <option name="MAIN_CLASS_NAME" value="it.project1.item.ItemRepositoryTest" />
+      <option name="METHOD_NAME" value="testGetAllItems" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemRepositoryTest.testGetItemById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectTeam1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.project1.item.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.project1.item" />
+      <option name="MAIN_CLASS_NAME" value="it.project1.item.ItemRepositoryTest" />
+      <option name="METHOD_NAME" value="testGetItemById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemRepositoryTest.testUpdateItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectTeam1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.project1.item.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.project1.item" />
+      <option name="MAIN_CLASS_NAME" value="it.project1.item.ItemRepositoryTest" />
+      <option name="METHOD_NAME" value="testUpdateItem" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.it.project1.Main" />
-        <item itemvalue="JUnit.AccountTest" />
-        <item itemvalue="JUnit.All in ProjectTeam1" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ItemRepositoryTest" />
+        <item itemvalue="JUnit.ItemRepositoryTest.testGetItemById" />
+        <item itemvalue="JUnit.ItemRepositoryTest.testUpdateItem" />
+        <item itemvalue="JUnit.ItemRepositoryTest.testAddItem" />
+        <item itemvalue="JUnit.ItemRepositoryTest.testGetAllItems" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +198,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676537736289</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="conversion of items package classes into single class">
+      <created>1679872075196</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679872075196</updated>
+    </task>
+    <task id="LOCAL-00004" summary="conversion of items package classes into single class">
+      <created>1679872102055</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679872102055</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -187,7 +233,8 @@
     <MESSAGE value="prova caricamento" />
     <MESSAGE value="incompleto. aggiunte classi, modificate interfacce" />
     <MESSAGE value="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati" />
+    <MESSAGE value="conversion of items package classes into single class" />
+    <option name="LAST_COMMIT_MESSAGE" value="conversion of items package classes into single class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2,6 +2,7 @@ package it.project1.item;
 
 public class Item {
 
+
     private int id;
     private String name;
     private String description;
@@ -33,7 +34,7 @@ public class Item {
     public enum ItemType {
         ARMOR,
         WEAPON,
-        CONSUMABLES,
+        CONSUMABLE,
         JUNK,
     }
 
