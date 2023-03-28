@@ -7,9 +7,11 @@
     <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="conversion of items package classes into single class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/Main.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/item/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/item/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/item/ItemRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/set_up_databases.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/set_up_databases.sql" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

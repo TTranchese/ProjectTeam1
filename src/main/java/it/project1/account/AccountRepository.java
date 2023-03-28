@@ -19,22 +19,24 @@ public class AccountRepository {
 	}
 
 	public void createNewAccount(String nickName, String password) {
-		//TODO aggiungere check se il nickname esiste già
-		String createAccountQuery = "INSERT INTO mmo.accounts (nickName, password) VALUES ('" + nickName + "', '" + password + "');";
-		try {
-			this.statement.executeUpdate(createAccountQuery);
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
+		if(!findAccount(nickName)){
+			String createAccountQuery = "INSERT INTO mmo.accounts (nickName, password) VALUES ('" + nickName + "', '" + password + "');";
+			try {
+				this.statement.executeUpdate(createAccountQuery);
+			} catch (SQLException e) {
+				throw new RuntimeException(e);
+			}
+		} else System.out.println("Account already exists!");
+
 	}
 
-	public boolean findAccount(Account account) {
+	public boolean findAccount(String nickName) {
 		boolean returnBool = false;
-		String query = "SELECT * FROM mmo.accounts WHERE nickName = '" + account.getName() + "' AND password = '" + account.getPassword() + "'";
+		String query = "SELECT * FROM mmo.accounts WHERE nickName = '" + nickName + "'";
 		try {
 			this.resultSet = this.statement.executeQuery(query);
 			while (resultSet.next()) {
-				if ((resultSet.getInt(1) == account.getId()) && (resultSet.getString(2).equals(account.getName())) && (resultSet.getString(3).equals(account.getPassword()))) {
+				if ((resultSet.getString(2).equals(nickName))) {
 					returnBool = true;
 				}
 
