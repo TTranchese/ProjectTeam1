@@ -79,3 +79,18 @@ VALUES
     ('Leather Armor', 'Basic armor made of leather', 150, 10, 'common', 0, 100, False, 'ARMOR', '30', 'Chest'),
     ('Chainmail Armor', 'Armor made of interlocking metal rings', 300, 5, 'rare', 100, 1000, False, 'ARMOR', '45', 'Chest'),
     ('Plate Helm', 'Heavy armor made of metal plates', 500, 2, 'legendary', 500, 5000, False, 'ARMOR', '100', 'Helm');
+
+CREATE TABLE IF NOT EXISTS characters(
+id INT NOT NULL AUTO_INCREMENT,
+account_id INT,
+name VARCHAR(255),
+c_level INT,
+job VARCHAR(255),
+gender VARCHAR(50),
+skinStyle INT,
+hairStyle INT,
+eyesStyle INT,
+
+PRIMARY KEY(id),
+FOREIGN KEY(account_id) REFERENCES accounts(id)
+);
