@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/character/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/character/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/set_up_databases.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/set_up_databases.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +16,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -31,9 +29,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.jdks/corretto-19.0.2/lib/src.zip!/java.base/java/lang/Object.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
