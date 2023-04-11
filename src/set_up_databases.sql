@@ -87,9 +87,6 @@ name VARCHAR(255),
 c_level INT,
 job VARCHAR(255),
 gender VARCHAR(50),
-skinStyle INT,
-hairStyle INT,
-eyesStyle INT,
 
 PRIMARY KEY(id),
 FOREIGN KEY(account_id) REFERENCES accounts(id)
