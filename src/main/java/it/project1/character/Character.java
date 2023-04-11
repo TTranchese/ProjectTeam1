@@ -8,18 +8,44 @@ public class Character {
     private int level;
     private String job;
     private char gender;
-    private int skinStyle;
-    private int hairStyle;
-    private int eyesStyle;
+    private double healthPoint;
+    private double manaPoint;
+    private int attackDamage;
+    private int magicDamage;
+    private int armorRes;
+    private int magicRes;
 
-    public Character(String name, int level, String job, char gender, int skinStyle, int hairStyle, int eyesStyle) {
+
+    public Character(String name, int level, String job, char gender) {
         this.name = name;
         this.level = level;
         this.job = job;
         this.gender = gender;
-        this.skinStyle = skinStyle;
-        this.hairStyle = hairStyle;
-        this.eyesStyle = eyesStyle;
+        if (job.equals("Tank")){
+            this.healthPoint = (level*1.2)*100;
+            this.manaPoint = (level*0.5)*10;
+            this.attackDamage = (int) ((level*0.6)*10);
+            this.magicDamage = (int) ((level*0.3)*10);
+            this.armorRes = (int) ((level*1.1)*10);
+            this.magicRes = (int) ((level*1.1)*10);
+        }
+        if (job.equals("Warrior")){
+            this.healthPoint = level*100;
+            this.manaPoint = (level*0.7)*10;
+            this.attackDamage = (int) ((level*1.1)*10);
+            this.magicDamage = (int) ((level*0.3)*10);
+            this.armorRes = (int) ((level*0.5)*10);
+            this.magicRes = (int) ((level*0.5)*10);
+        }
+        if (job.equals("Mage")){
+            this.healthPoint = (level*0.8)*100;
+            this.manaPoint = (level*1.1)*10;
+            this.attackDamage = (int) ((level*0.3)*10);
+            this.magicDamage = (int) ((level*1.1)*10);
+            this.armorRes = (int) ((level*0.5)*10);
+            this.magicRes = (int) ((level*0.5)*10);
+        }
+
     }
 
     public int getId() {
@@ -70,27 +96,51 @@ public class Character {
         this.gender = gender;
     }
 
-    public int getSkinStyle() {
-        return skinStyle;
+    public double getHealthPoint() {
+        return healthPoint;
     }
 
-    public void setSkinStyle(int skinStyle) {
-        this.skinStyle = skinStyle;
+    public void setHealthPoint(double healthPoint) {
+        this.healthPoint = healthPoint;
     }
 
-    public int getHairStyle() {
-        return hairStyle;
+    public double getManaPoint() {
+        return manaPoint;
     }
 
-    public void setHairStyle(int hairStyle) {
-        this.hairStyle = hairStyle;
+    public void setManaPoint(double manaPoint) {
+        this.manaPoint = manaPoint;
     }
 
-    public int getEyesStyle() {
-        return eyesStyle;
+    public int getAttackDamage() {
+        return attackDamage;
     }
 
-    public void setEyesStyle(int eyesStyle) {
-        this.eyesStyle = eyesStyle;
+    public void setAttackDamage(int attackDamage) {
+        this.attackDamage = attackDamage;
+    }
+
+    public int getMagicDamage() {
+        return magicDamage;
+    }
+
+    public void setMagicDamage(int magicDamage) {
+        this.magicDamage = magicDamage;
+    }
+
+    public int getArmorRes() {
+        return armorRes;
+    }
+
+    public void setArmorRes(int armorRes) {
+        this.armorRes = armorRes;
+    }
+
+    public int getMagicRes() {
+        return magicRes;
+    }
+
+    public void setMagicRes(int magicRes) {
+        this.magicRes = magicRes;
     }
 }
