@@ -85,9 +85,17 @@ id INT NOT NULL AUTO_INCREMENT,
 account_id INT,
 name VARCHAR(255),
 c_level INT,
-job VARCHAR(255),
-gender VARCHAR(50),
+job ENUM('Tank', 'Warrior', 'Mage') NOT NULL,
+gender ENUM('M', 'F', 'N') NOT NULL,
 
 PRIMARY KEY(id),
 FOREIGN KEY(account_id) REFERENCES accounts(id)
 );
+
+INSERT INTO characters (account_id, name,  c_level, job, gender)
+VALUES (1, 'Gringo1', 1, 'Warrior', 'M'),
+       (2, 'Gringo2', 1, 'Mage', 'F'),
+       (3, 'Gringo3', 1, 'Tank', 'N'),
+       (4, 'Gringo4', 1, 'Warrior', 'F'),
+       (5, 'Gringo5', 1, 'Mage', 'N'),
+       (6, 'Gringo6', 1, 'Tank', 'M');
