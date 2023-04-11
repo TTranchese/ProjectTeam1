@@ -32,7 +32,7 @@ public class InventoryRepository {
         }
     }
 
-    public void upgradeInventory(Inventory inventory){
+    public void updateInventory(Inventory inventory){
         String updateInventoryQuery = "UPDATE mmo.inventory" +
                 "SET idOwner = ?, idItem = ?, quantity = ?, isEquipped = ?" +
                 "WHERE id = ?";
