@@ -14,7 +14,7 @@ public class AccountTest {
 	void testIfAccountExists(){
 		Account account = new Account(1, "DragonSlayer77", "password1");
 		AccountRepository accountRepository = new AccountRepository();
-		boolean checkIfExists = accountRepository.findAccount(account);
+		boolean checkIfExists = accountRepository.findAccount(account.getName());
 		Assertions.assertTrue(checkIfExists);
 	}
 
@@ -22,7 +22,7 @@ public class AccountTest {
 	void testIfAccountDoesntExist(){
 		Account account = new Account(1, "CiccioPasticcio", "password1");
 		AccountRepository accountRepository = new AccountRepository();
-		boolean checkIfDoesntExists = accountRepository.findAccount(account);
+		boolean checkIfDoesntExists = accountRepository.findAccount(account.getName());
 		Assertions.assertFalse(checkIfDoesntExists);
 	}
 
