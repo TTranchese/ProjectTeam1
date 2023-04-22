@@ -6,11 +6,11 @@ CREATE DATABASE IF NOT EXISTS mmo;
 
 CREATE TABLE IF NOT EXISTS accounts(
 id INT NOT NULL AUTO_INCREMENT,
-nickName VARCHAR(255),
+nick_name VARCHAR(255),
 password VARCHAR(255),
 PRIMARY KEY(id)
 );
-INSERT INTO accounts (nickName, password)
+INSERT INTO accounts (nick_name, password)
 VALUES
     ('DragonSlayer77', 'password1'),
     ('TheWizard42', 'password2'),

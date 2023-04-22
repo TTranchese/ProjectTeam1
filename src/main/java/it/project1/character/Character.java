@@ -1,5 +1,7 @@
 package it.project1.character;
 
+import jakarta.persistence.Entity;
+
 
 public class Character {
     private int id;

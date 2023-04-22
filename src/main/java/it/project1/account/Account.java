@@ -1,25 +1,38 @@
 package it.project1.account;
 
 
-import java.sql.*;
+import jakarta.persistence.*;
+import jdk.jfr.Enabled;
+import lombok.Builder;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
+
+@Entity
+@Table(name = "accounts")
 public class Account{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String name;
+	@Column
+	private String nickName;
+	@Column
 	private String password;
-
-	public Account(int id, String name, String password) {
+	
+	public Account() {
+	}
+	
+	public Account(int id, String nickName, String password) {
 		this.id = id;
-		this.name = name;
+		this.nickName = nickName;
 		this.password = password;
 	}
 
 	public String getName() {
-		return name;
+		return nickName;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.nickName = name;
 	}
 
 	public String getPassword() {
@@ -37,5 +50,5 @@ public class Account{
 	public void setId(int id) {
 		this.id = id;
 	}
-
+	
 }

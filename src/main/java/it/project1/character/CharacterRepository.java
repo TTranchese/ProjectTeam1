@@ -1,21 +1,8 @@
 package it.project1.character;
 
-import java.sql.*;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public class CharacterRepository {
-	private Connection connection;
-	private PreparedStatement preparedStatement;
-	private ResultSet resultSet;
-
-	public CharacterRepository(){
-		try {
-			this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mmo", "root", "root");
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
-	}
-	//TODO create all the CRUD functions
-	public void createNewCharacter(int accountId){
-
-	}
+@Repository
+public interface CharacterRepository extends JpaRepository<CharacterEntity, Integer> {
 }
