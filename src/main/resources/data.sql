@@ -20,3 +20,11 @@ VALUES
     ('TheSilentBlade', 'password18'),
     ('TheLastSamurai', 'password19'),
     ('PhoenixRider', 'password20');
+
+INSERT INTO characters (account_id, name,  c_level, job, gender)
+VALUES (1, 'Gringo1', 1, 'Warrior', 'M'),
+       (2, 'Gringo2', 1, 'Mage', 'F'),
+       (3, 'Gringo3', 1, 'Tank', 'N'),
+       (4, 'Gringo4', 1, 'Warrior', 'F'),
+       (5, 'Gringo5', 1, 'Mage', 'N'),
+       (6, 'Gringo6', 1, 'Tank', 'M');

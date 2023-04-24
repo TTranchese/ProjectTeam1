@@ -4,8 +4,9 @@ import jakarta.persistence.*;
 
 
 @Entity
+@Table(name = "characters")
 public class CharacterEntity {
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column
 	//TODO create a link between this entity and the account entity
@@ -13,7 +14,7 @@ public class CharacterEntity {
 	@Column
 	private String name;
 	@Column
-	private int level;
+	private int c_level;
 	@Column
 	private String job;
 	@Column
@@ -22,10 +23,10 @@ public class CharacterEntity {
 	public CharacterEntity() {
 	}
 	
-	public CharacterEntity(int accountId, String name, int level, String job, char gender) {
+	public CharacterEntity(int accountId, String name, int c_level, String job, char gender) {
 		this.accountId = accountId;
 		this.name = name;
-		this.level = level;
+		this.c_level = c_level;
 		this.job = job;
 		this.gender = gender;
 	}
@@ -54,12 +55,12 @@ public class CharacterEntity {
 		this.name = name;
 	}
 	
-	public int getLevel() {
-		return level;
+	public int getCLevel() {
+		return c_level;
 	}
 	
-	public void setLevel(int level) {
-		this.level = level;
+	public void setCLevel(int level) {
+		this.c_level = level;
 	}
 	
 	public String getJob() {
