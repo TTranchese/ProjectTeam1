@@ -1,27 +1,12 @@
-# 配置tomcat端口号
-server:
-  port: 8080
-
-# 配置数据源
 spring:
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
   datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/xxx_db
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/mmo
     username: root
     password: root
-
-# 配置mybatis
-mybatis:
-  # 配置类型别名包扫描
-  type-aliases-package: com.xxx.xxx.pojo
-  # 配置sql语句映射文件路径
-  mapper-locations:
-    - classpath:mappers/*.xml
-  # 驼峰映射
-  configuration:
-    map-underscore-to-camel-case: true
-
-# 配置日志
-logging:
-  level:
-    com.xxx: debug
+    driverClassName: com.mysql.cj.jdbc.Driver
