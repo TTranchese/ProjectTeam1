@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_2023_19_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_03_2023_19_12__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/item/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/item/ItemRepositoryOld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/item/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/item/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/it/project1/item/ItemRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/project1/item/ItemRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
