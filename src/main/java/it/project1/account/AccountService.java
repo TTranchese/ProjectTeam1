@@ -49,6 +49,16 @@ public class AccountService {
 		} else {
 			System.out.println("Nickname already in use!");
 		}
-		
+	}
+	
+	public void delAccount(int id, String password){
+		Account account = accountRepository.findById(id);
+		if (account==null){
+			System.out.println("The account doesn't exist!");
+		} else if(account.getPassword().equals(password)){
+			accountRepository.delete(account);
+		} else {
+			System.out.println("Password not matching!");
+		}
 	}
 }

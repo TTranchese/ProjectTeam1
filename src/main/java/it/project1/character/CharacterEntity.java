@@ -1,5 +1,6 @@
 package it.project1.character;
 
+import it.project1.account.Account;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,64 +15,16 @@ import lombok.NoArgsConstructor;
 public class CharacterEntity {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column
-	//TODO create a link between this entity and the account entity
-	private int accountId;
-	@Column
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn (name = "account_id")
+	private Account accountId;
+	@Column(unique = true, nullable = false)
 	private String name;
-	@Column
+	@Column(nullable = false)
 	private int c_level;
-	@Column
+	@Column(nullable = false)
 	private String job;
-	@Column
+	@Column(nullable = false)
 	private char gender;
 	
-	
-	public int getId() {
-		return id;
-	}
-	
-	public void setId(int id) {
-		this.id = id;
-	}
-	
-	public int getAccountId() {
-		return accountId;
-	}
-	
-	public void setAccountId(int accountId) {
-		this.accountId = accountId;
-	}
-	
-	public String getName() {
-		return name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public int getCLevel() {
-		return c_level;
-	}
-	
-	public void setCLevel(int level) {
-		this.c_level = level;
-	}
-	
-	public String getJob() {
-		return job;
-	}
-	
-	public void setJob(String job) {
-		this.job = job;
-	}
-	
-	public char getGender() {
-		return gender;
-	}
-	
-	public void setGender(char gender) {
-		this.gender = gender;
-	}
 }

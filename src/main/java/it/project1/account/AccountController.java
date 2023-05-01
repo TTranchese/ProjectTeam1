@@ -36,5 +36,9 @@ public class AccountController {
 	public void putPassword(@RequestParam int id, @RequestParam String newNickName){
 		accountService.putNickName(id, newNickName);
 	}
+	@DeleteMapping("/delete")
+	public void delAccount(@RequestParam int id, @RequestParam String password){
+		accountService.delAccount(id, password);
+	}
 }
 

@@ -16,10 +16,8 @@ public class Account{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column
+	@Column(unique = true, nullable = false)
 	private String nickName;
-	@Column
+	@Column(nullable = false)
 	private String password;
-	
-	
 }
