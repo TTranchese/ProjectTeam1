@@ -1,32 +1,30 @@
 package it.project1.item;
 
-import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
+@Service
 public class ItemService {
 
-    private final ItemRepository itemRepository;
+    @Autowired
+    private ItemRepository itemRepository;
 
-    public ItemService(ItemRepository itemRepository) {
-        this.itemRepository = itemRepository;
+    public Item saveOrUpdateItem(Item item) {
+        return itemRepository.save(item);
     }
 
-    public void addItem(Item item) {
-        itemRepository.addItem(item);
-    }
-
-    public void updateItem(Item item) {
-        itemRepository.updateItem(item);
-    }
-
-    public Item getItemById(int id) {
-        return itemRepository.getItemById(id);
+    public Optional<Item> getItemById(int id) {
+        return itemRepository.findById(id);
     }
 
     public List<Item> getAllItems() {
-        return itemRepository.getAllItems();
+        return itemRepository.findAll();
     }
 
     public void deleteItem(int id) {
-        itemRepository.deleteItem(id);
+        itemRepository.deleteById(id);
     }
 }
