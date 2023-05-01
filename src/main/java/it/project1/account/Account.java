@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table
+@Table (name = "accounts")
 public class Account{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,28 +21,5 @@ public class Account{
 	@Column
 	private String password;
 	
-	public String getName() {
-		return nickName;
-	}
-
-	public void setName(String name) {
-		this.nickName = name;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 	
 }
