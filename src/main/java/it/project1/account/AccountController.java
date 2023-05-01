@@ -18,7 +18,7 @@ public class AccountController {
 		return accountService.getAccountById(id);
 	}
 	
-	@GetMapping("/findall")
+	@GetMapping("/findAll")
 	public List<Account> returnAccounts() {
 		return accountService.getListOfAccounts();
 	}
@@ -27,6 +27,14 @@ public class AccountController {
 	public void registerAccount(@RequestParam String nickName, @RequestParam String password) {
 		accountService.postNewAccount(nickName, password);
 	}
-	
+
+	@PutMapping("/changePassword")
+	public void putPassword(@RequestParam int id, @RequestParam String oldPassword, @RequestParam String newPassword){
+		accountService.putPassword(id, oldPassword, newPassword);
+	}
+	@PutMapping("/changeNickName")
+	public void putPassword(@RequestParam int id, @RequestParam String newNickName){
+		accountService.putNickName(id, newNickName);
+	}
 }
 
