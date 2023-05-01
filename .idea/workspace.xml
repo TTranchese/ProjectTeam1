@@ -4,40 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_smallrye_jandex_3_0_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_32.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_33.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_1.xml" afterDir="false" />
+    <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="Added @Entity adn  tablename to MonsterEntity&#10;MonsterRepository interface modified&#10;Added Methods to MonsterService&#10;Created MonsterConstroller">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_19.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_1_7_Final.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_3_0_5.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_0_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_0_5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_6_0_7.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectTeam1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectTeam1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Ability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/Ability.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/BirdMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/BirdMonster.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Condor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/Condor.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Crow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/Crow.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Eagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/Eagle.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/Element.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/ElementalMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/ElementalMonster.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/FireElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/FireElement.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/FlyingMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/FlyingMonster.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/GroundElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/GroundElement.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/Monster.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterAbilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/MonsterAbilities.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/MonsterClass.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MoveSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/MoveSet.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/NormalMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/NormalMonster.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/Plant.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/Rideable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/discard/Rideable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,20 +63,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="monster" />
@@ -250,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679872102055</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="renamed all classes monster in txt and replaced in discard&#10;Created class MonsterEntity, MonsterRepository, MonsterService.&#10;Populated MonsterEntity&#10;MonsterRepository and MonsterService actually are empty">
+      <created>1682668697190</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682668697190</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -273,7 +259,9 @@
     <MESSAGE value="incompleto. aggiunte classi, modificate interfacce" />
     <MESSAGE value="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati" />
     <MESSAGE value="conversion of items package classes into single class" />
-    <option name="LAST_COMMIT_MESSAGE" value="conversion of items package classes into single class" />
+    <MESSAGE value="renamed all classes monster in txt and replaced in discard&#10;Created class MonsterEntity, MonsterRepository, MonsterService.&#10;Populated MonsterEntity&#10;MonsterRepository and MonsterService actually are empty" />
+    <MESSAGE value="Added @Entity adn  tablename to MonsterEntity&#10;MonsterRepository interface modified&#10;Added Methods to MonsterService&#10;Created MonsterConstroller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added @Entity adn  tablename to MonsterEntity&#10;MonsterRepository interface modified&#10;Added Methods to MonsterService&#10;Created MonsterConstroller" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

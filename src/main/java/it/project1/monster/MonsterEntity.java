@@ -1,21 +1,21 @@
 package it.project1.monster;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "monsters")
 public class MonsterEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "monster_id")
     private int monsterId;
-    @Column
+    @Column(name = "name")
     private String name;
-    @Column
+    @Column(name = "m_level")
     private int m_level;
-    @Column
+    @Column(name = "type")
     private String Type;
-    @Column
+    @Column(name = "element")
     private String Element;
 
 
@@ -34,7 +34,7 @@ public class MonsterEntity {
         return monsterId;
     }
 
-    public void seMonsterId(int monsterId) {this.monsterId = monsterId;}
+    public void setMonsterId(int monsterId) {this.monsterId = monsterId;}
 
     public String getMonsterName() {
         return name;
