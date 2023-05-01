@@ -9,7 +9,6 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/accounts")
 public class AccountController {
-	@Autowired
 	private AccountService accountService;
 	
 	@GetMapping("/")

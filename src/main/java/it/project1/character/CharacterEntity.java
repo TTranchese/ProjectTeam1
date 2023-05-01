@@ -1,10 +1,16 @@
 package it.project1.character;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Entity
-@Table(name = "characters")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table
 public class CharacterEntity {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -20,16 +26,6 @@ public class CharacterEntity {
 	@Column
 	private char gender;
 	
-	public CharacterEntity() {
-	}
-	
-	public CharacterEntity(int accountId, String name, int c_level, String job, char gender) {
-		this.accountId = accountId;
-		this.name = name;
-		this.c_level = c_level;
-		this.job = job;
-		this.gender = gender;
-	}
 	
 	public int getId() {
 		return id;

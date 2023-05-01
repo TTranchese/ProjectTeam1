@@ -2,13 +2,16 @@ package it.project1.account;
 
 
 import jakarta.persistence.*;
-import jdk.jfr.Enabled;
-import lombok.Builder;
-import org.springframework.boot.context.properties.bind.DefaultValue;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Entity
-@Table(name = "accounts")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table
 public class Account{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,15 +21,6 @@ public class Account{
 	@Column
 	private String password;
 	
-	public Account() {
-	}
-	
-	public Account(int id, String nickName, String password) {
-		this.id = id;
-		this.nickName = nickName;
-		this.password = password;
-	}
-
 	public String getName() {
 		return nickName;
 	}
