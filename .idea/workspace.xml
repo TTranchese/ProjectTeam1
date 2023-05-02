@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1d17e9e-9d62-425f-9424-ad088c0736c0" name="Changes" comment="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/account/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/account/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/account/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +33,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/corretto-19.0.2/lib/src.zip!/java.base/java/lang/Object.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,7 +70,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
   }
 }</component>
   <component name="RecentsManager">
