@@ -12,12 +12,12 @@ public class AccountController {
 	private AccountService accountService;
 	
 	@GetMapping("/")
-	public Account returnById(@RequestParam int id) {
+	public AccountEntity returnById(@RequestParam int id) {
 		return accountService.getAccountById(id);
 	}
 	
 	@GetMapping("/findAll")
-	public List<Account> returnAccounts() {
+	public List<AccountEntity> returnAccounts() {
 		return accountService.getListOfAccounts();
 	}
 	

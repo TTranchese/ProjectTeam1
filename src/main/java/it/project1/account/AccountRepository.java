@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface AccountRepository extends JpaRepository<Account, Integer> {
-	Account findById(int id);
+public interface AccountRepository extends JpaRepository<AccountEntity, Integer> {
+	AccountEntity findById(int id);
 	
-	List<Account> findByNickName(String nickName);
+	List<AccountEntity> findByNickName(String nickName);
 }

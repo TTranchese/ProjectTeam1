@@ -1,6 +1,5 @@
 package it.project1.character;
 
-import it.project1.account.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

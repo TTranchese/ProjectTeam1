@@ -1,6 +1,6 @@
 package it.project1.character;
 
-import it.project1.account.Account;
+import it.project1.account.AccountEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,7 +18,7 @@ public class CharacterEntity {
 	private int id;
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "account_id")
-	private Account accountId;
+	private AccountEntity accountEntityId;
 	@Column(unique = true, nullable = false)
 	private String name;
 	@Column(nullable = false)
