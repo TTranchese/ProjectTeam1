@@ -1,17 +1,15 @@
 package it.project1.monster;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("monsters")
+@RequestMapping("/monsters")
 public class MonsterController {
-    private final MonsterService monsterService;
-
-    public MonsterController(MonsterService monsterService) {
-        this.monsterService = monsterService;
-    }
+    @Autowired
+    private MonsterService monsterService;
     @GetMapping
     public List<MonsterEntity> getAllMonsters() {
         return monsterService.getAllMonsters();
@@ -29,7 +27,7 @@ public class MonsterController {
 
     @PutMapping("/{id}")
     public MonsterEntity updateMonster(@PathVariable Long id, @RequestBody MonsterEntity monster) {
-        monster.setMonsterId(Math.toIntExact(id));
+        monster.setId(Math.toIntExact(id));
         return monsterService.createOrUpdateMonster(monster);
     }
 
