@@ -11,12 +11,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table (name = "characters")
+@Table(name = "characters")
 public class CharacterEntity {
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn (name = "account_id")
+	@JoinColumn(name = "account_id")
 	private Account accountId;
 	@Column(unique = true, nullable = false)
 	private String name;
