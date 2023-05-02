@@ -32,7 +32,7 @@ public class ItemController {
     }
 
     @PostMapping
-    public ResponseEntity<Item> addItem(@RequestParam Item item){
+    public ResponseEntity<Item> addItem(@RequestBody Item item){
         Item newItem = itemService.saveOrUpdateItem(item);
         return new ResponseEntity<>(newItem, HttpStatus.CREATED);
     }
