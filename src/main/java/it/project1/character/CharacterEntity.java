@@ -16,7 +16,7 @@ public class CharacterEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name = "account_id")
 	private AccountEntity accountEntityId;
 	@Column(unique = true, nullable = false)
