@@ -7,9 +7,7 @@
     <list default="true" id="0e510fcc-b6b4-4007-a7bf-72ab7a67fddb" name="Changes" comment="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/monster/MonsterEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +31,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/3.0.4/spring-data-commons-3.0.4.jar!/org/springframework/data/repository/ListCrudRepository.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
