@@ -5,16 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-@SuppressWarnings("Deprecated")
 @Service
 public class MonsterService {
     @Autowired
-    private final MonsterRepository monsterRepository;
-
-    public MonsterService(MonsterRepository monsterRepository) {
-        this.monsterRepository = monsterRepository;
-    }
+    public MonsterRepository monsterRepository;
 
     public List<MonsterEntity> getAllMonsters() {
         return monsterRepository.findAll();

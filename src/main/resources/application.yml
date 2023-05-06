@@ -1,12 +1,13 @@
 spring:
-  jpa:
-    database: mysql
-    show-sql: true
-    hibernate:
-      ddl-auto: create-drop
   datasource:
     platform: mysql
     url: jdbc:mysql://localhost:3306/mmo
     username: root
     password: root
     driverClassName: com.mysql.cj.jdbc.Driver
+    data: https://github.com/TTranchese/ProjectTeam1/blob/97105bf4e9b0f93f77960d3466c351fd257cf60b/src/main/resources/data.sql
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
