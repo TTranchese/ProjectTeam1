@@ -27,7 +27,7 @@ public class AccountService {
 		AccountEntity accountEntity = new AccountEntity();
 		accountEntity.setNickName(nickName);
 		accountEntity.setPassword(password);
-		Optional<List<AccountEntity>> accountEntityList = accountRepository.findByNickName(nickName);
+		List<AccountEntity> accountEntityList = accountRepository.findByNickName(nickName);
 		if (accountEntityList.isEmpty()) {
 			accountRepository.save(accountEntity);
 			return new ResponseEntity<>(accountEntity, HttpStatus.CREATED);
@@ -39,21 +39,26 @@ public class AccountService {
 	
 	public ResponseEntity<AccountEntity> putPassword(int id, String oldPassword, String newPassword) {
 		Optional<AccountEntity> optionalAccountEntity = accountRepository.findById(id);
-		if (optionalAccountEntity.isPresent()){
-			return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+		if (optionalAccountEntity.isEmpty()){
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else {
 			AccountEntity accountEntity = optionalAccountEntity.get();
-			accountEntity.setPassword(newPassword);
-			accountRepository.save(accountEntity);
-			return new ResponseEntity<>(accountEntity, HttpStatus.OK);
+			if(accountEntity.getPassword().equals(oldPassword)){
+				accountEntity.setPassword(newPassword);
+				accountRepository.save(accountEntity);
+				return new ResponseEntity<>(accountEntity, HttpStatus.OK);
+			} else {
+				return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+			}
 		}
+		
 	}
 	
 	public ResponseEntity<AccountEntity> putNickName(int id, String newNickName) {
 		Optional<AccountEntity> optionalAccountEntity = accountRepository.findById(id);
 		if (optionalAccountEntity.isEmpty()){
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-		} else if(accountRepository.findByNickName(newNickName).isPresent()){
+		} else if(!accountRepository.findByNickName(newNickName).isEmpty()){
 			return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
 		} else {
 			AccountEntity accountEntity = optionalAccountEntity.get();

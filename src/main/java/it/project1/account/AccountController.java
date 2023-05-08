@@ -25,23 +25,23 @@ public class AccountController {
 	}
 	
 	@PostMapping("/register")
-	public void postNewAccount(@RequestParam String nickName, @RequestParam String password) {
-		accountService.postNewAccount(nickName, password);
+	public ResponseEntity<AccountEntity> postNewAccount(@RequestParam String nickName, @RequestParam String password) {
+		return accountService.postNewAccount(nickName, password);
 	}
 	
 	@PutMapping("/changePassword")
-	public void putPassword(@RequestParam int id, @RequestParam String oldPassword, @RequestParam String newPassword) {
-		accountService.putPassword(id, oldPassword, newPassword);
+	public ResponseEntity<AccountEntity> putPassword(@RequestParam int id, @RequestParam String oldPassword, @RequestParam String newPassword) {
+		return accountService.putPassword(id, oldPassword, newPassword);
 	}
 	
 	@PutMapping("/changeNickName")
-	public void putNickName(@RequestParam int id, @RequestParam String newNickName) {
-		accountService.putNickName(id, newNickName);
+	public ResponseEntity<AccountEntity> putNickName(@RequestParam int id, @RequestParam String newNickName) {
+		return accountService.putNickName(id, newNickName);
 	}
 	
 	@DeleteMapping("/delete")
-	public void delAccount(@RequestParam int id, @RequestParam String password) {
-		accountService.delAccount(id, password);
+	public ResponseEntity<AccountEntity> delAccount(@RequestParam int id, @RequestParam String password) {
+		return accountService.delAccount(id, password);
 	}
 }
 
