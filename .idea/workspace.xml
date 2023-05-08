@@ -7,7 +7,9 @@
     <list default="true" id="0e510fcc-b6b4-4007-a7bf-72ab7a67fddb" name="Changes" comment="Rimossi errori nelle classi ability, birdMonsterm, ElementalMonster,GroundElement,Monster,Plant nelle classi. successivamente dovrò rivedere le relazioni tra le classi per ottenere i risultati sperati">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/project1/character/CharacterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

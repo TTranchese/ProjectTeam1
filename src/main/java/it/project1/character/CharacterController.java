@@ -26,4 +26,9 @@ public class CharacterController {
 		return characterService.getListOfCharacters();
 	}
 	
+	@GetMapping("/find-by-account-id")
+	public ResponseEntity<List<CharacterEntity>> getByAccountId(@RequestParam int accountId){
+		return characterService.getByAccountId(accountId);
+	}
+	
 }
