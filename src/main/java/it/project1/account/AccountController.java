@@ -14,7 +14,7 @@ public class AccountController {
 	@Autowired
 	private AccountService accountService;
 	
-	@GetMapping("/")
+	@GetMapping
 	public ResponseEntity<AccountEntity> getById(@RequestParam int id) {
 		return accountService.findById(id);
 	}

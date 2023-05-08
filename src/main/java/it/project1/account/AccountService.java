@@ -16,7 +16,13 @@ public class AccountService {
 	public AccountRepository accountRepository;
 	
 	public ResponseEntity<AccountEntity> findById(int id) {
-		return new ResponseEntity<>(accountRepository.findById(id).get(), HttpStatus.FOUND);
+		Optional<AccountEntity> optionalAccountEntity = accountRepository.findById(id);
+		if (optionalAccountEntity.isEmpty()){
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		} else{
+			AccountEntity accountEntity = optionalAccountEntity.get();
+			return new ResponseEntity<>(accountEntity, HttpStatus.FOUND);
+		}
 	}
 	
 	public ResponseEntity<List<AccountEntity>> findAll() {
