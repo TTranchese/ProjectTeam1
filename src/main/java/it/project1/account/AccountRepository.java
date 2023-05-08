@@ -6,9 +6,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface AccountRepository extends JpaRepository<AccountEntity, Integer> {
-	AccountEntity findById(int id);
-	List<AccountEntity> findByNickName(String nickName);
+	Optional<List<AccountEntity>> findByNickName(String nickName);
 }

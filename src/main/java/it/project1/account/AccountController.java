@@ -1,9 +1,12 @@
 package it.project1.account;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/accounts")
@@ -12,17 +15,17 @@ public class AccountController {
 	private AccountService accountService;
 	
 	@GetMapping("/")
-	public AccountEntity returnById(@RequestParam int id) {
-		return accountService.getAccountById(id);
+	public ResponseEntity<AccountEntity> getById(@RequestParam int id) {
+		return accountService.findById(id);
 	}
 	
-	@GetMapping("/findAll")
-	public List<AccountEntity> returnAccounts() {
-		return accountService.getListOfAccounts();
+	@GetMapping("/find-all")
+	public ResponseEntity<List<AccountEntity>> getAll() {
+		return accountService.findAll();
 	}
 	
 	@PostMapping("/register")
-	public void registerAccount(@RequestParam String nickName, @RequestParam String password) {
+	public void postNewAccount(@RequestParam String nickName, @RequestParam String password) {
 		accountService.postNewAccount(nickName, password);
 	}
 	
@@ -32,7 +35,7 @@ public class AccountController {
 	}
 	
 	@PutMapping("/changeNickName")
-	public void putPassword(@RequestParam int id, @RequestParam String newNickName) {
+	public void putNickName(@RequestParam int id, @RequestParam String newNickName) {
 		accountService.putNickName(id, newNickName);
 	}
 	
