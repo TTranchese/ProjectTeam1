@@ -3,10 +3,7 @@ package it.project1.character;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.List;
@@ -29,6 +26,20 @@ public class CharacterController {
 	@GetMapping("/find-by-account-id")
 	public ResponseEntity<List<CharacterEntity>> getByAccountId(@RequestParam int accountId){
 		return characterService.getByAccountId(accountId);
+	}
+	
+	@PostMapping("/create")
+	public ResponseEntity<CharacterEntity> postCharacter(@RequestBody CharacterEntity characterEntity){
+		return characterService.postCharacter(characterEntity);
+	}
+	@DeleteMapping("/delete")
+	public ResponseEntity<CharacterEntity> delCharacter(@RequestParam int id, @RequestParam String password){
+		return characterService.delCharacter(id, password);
+	}
+	
+	@PutMapping("/update")
+	public ResponseEntity<CharacterEntity> putCharacter(@RequestBody CharacterEntity characterEntity){
+		return characterService.putCharacter(characterEntity);
 	}
 	
 }
