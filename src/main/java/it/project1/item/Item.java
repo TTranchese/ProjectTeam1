@@ -15,7 +15,7 @@ public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
     @Column(nullable = false)
     private String name;
     @Column
@@ -41,6 +41,4 @@ public class Item {
     private String subtype1;
     @Column
     private int subtype2;
-
-
 }

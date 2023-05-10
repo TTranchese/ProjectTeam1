@@ -15,14 +15,14 @@ public class ItemController {
     @Autowired
     private ItemService itemService;
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Item>> getAllItems(){
         List<Item> itemList = itemService.getAllItems();
         return new ResponseEntity<>(itemList, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Item> getItemById(@PathVariable int id) {
+    public ResponseEntity<Item> getItemById(@PathVariable long id) {
         Optional<Item> item = itemService.getItemById(id);
         if(item.isPresent()) {
             return new ResponseEntity<>(item.get(), HttpStatus.OK);
@@ -31,14 +31,14 @@ public class ItemController {
         }
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Item> addItem(@RequestBody Item item){
         Item newItem = itemService.saveOrUpdateItem(item);
         return new ResponseEntity<>(newItem, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Item> updateitem(@PathVariable int id, @RequestParam Item item){
+    @PutMapping("update/{id}")
+    public ResponseEntity<Item> updateItem(@PathVariable long id, @RequestParam Item item){
         Optional<Item> existingItem = itemService.getItemById(id);
         if (existingItem.isPresent()) {
             item.setId(id);
@@ -49,8 +49,8 @@ public class ItemController {
         }
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<HttpStatus> deleteItemById(@PathVariable int id){
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<HttpStatus> deleteItemById(@PathVariable long id){
         Optional<Item> item = itemService.getItemById(id);
         if(item.isPresent()){
             itemService.deleteItem(id);
