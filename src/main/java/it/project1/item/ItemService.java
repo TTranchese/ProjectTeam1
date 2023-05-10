@@ -13,10 +13,10 @@ public class ItemService {
     private ItemRepository itemRepository;
 
     public Item saveOrUpdateItem(Item item) {
-        return itemRepository.save(item);
+        return itemRepository.saveAndFlush(item);
     }
 
-    public Optional<Item> getItemById(int id) {
+    public Optional<Item> getItemById(long id) {
         return itemRepository.findById(id);
     }
 
@@ -24,7 +24,7 @@ public class ItemService {
         return itemRepository.findAll();
     }
 
-    public void deleteItem(int id) {
+    public void deleteItem(long id) {
         itemRepository.deleteById(id);
     }
 }
