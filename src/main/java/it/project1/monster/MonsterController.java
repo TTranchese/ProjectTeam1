@@ -9,7 +9,7 @@ import java.util.List;
 @RequestMapping("/monsters")
 public class MonsterController {
     @Autowired
-    private MonsterService monsterService;
+    public MonsterService monsterService;
     @GetMapping
     public List<MonsterEntity> getAllMonsters() {
         return monsterService.getAllMonsters();
