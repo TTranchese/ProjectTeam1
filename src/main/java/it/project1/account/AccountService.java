@@ -1,67 +1,91 @@
 package it.project1.account;
 
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AccountService {
 	@Autowired
 	public AccountRepository accountRepository;
 	
-	public AccountEntity getAccountById(int id) {
-		return accountRepository.findById(id);
+	public ResponseEntity<AccountEntity> findById(int id) {
+		Optional<AccountEntity> optionalAccountEntity = accountRepository.findById(id);
+		if (optionalAccountEntity.isEmpty()){
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		} else{
+			AccountEntity accountEntity = optionalAccountEntity.get();
+			return new ResponseEntity<>(accountEntity, HttpStatus.FOUND);
+		}
 	}
 	
-	public List<AccountEntity> getListOfAccounts() {
-		return accountRepository.findAll();
+	public ResponseEntity<List<AccountEntity>> findAll() {
+		return new ResponseEntity<>(accountRepository.findAll(), HttpStatus.FOUND);
 	}
 	
-	public void postNewAccount(String nickName, String password) {
+	public ResponseEntity<AccountEntity> postNewAccount(String nickName, String password) {
 		AccountEntity accountEntity = new AccountEntity();
 		accountEntity.setNickName(nickName);
 		accountEntity.setPassword(password);
 		List<AccountEntity> accountEntityList = accountRepository.findByNickName(nickName);
 		if (accountEntityList.isEmpty()) {
 			accountRepository.save(accountEntity);
-			System.out.println("AccountEntity created!");
+			return new ResponseEntity<>(accountEntity, HttpStatus.CREATED);
 		} else {
-			System.out.println("Nickname already in use!");
+			return new ResponseEntity<>(accountEntity, HttpStatus.NOT_ACCEPTABLE);
 		}
 		
 	}
 	
-	public void putPassword(int id, String oldPassword, String newPassword) {
-		AccountEntity accountEntity = getAccountById(id);
-		if (accountEntity.getPassword().equals(oldPassword)) {
-			accountEntity.setPassword(newPassword);
-			accountRepository.save(accountEntity);
+	public ResponseEntity<AccountEntity> putPassword(int id, String oldPassword, String newPassword) {
+		Optional<AccountEntity> optionalAccountEntity = accountRepository.findById(id);
+		if (optionalAccountEntity.isEmpty()){
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else {
-			System.out.println("Incorrect old password!");
+			AccountEntity accountEntity = optionalAccountEntity.get();
+			if(accountEntity.getPassword().equals(oldPassword)){
+				accountEntity.setPassword(newPassword);
+				accountRepository.save(accountEntity);
+				return new ResponseEntity<>(accountEntity, HttpStatus.OK);
+			} else {
+				return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+			}
 		}
 		
 	}
 	
-	public void putNickName(int id, String newNickName) {
-		AccountEntity accountEntity = getAccountById(id);
-		if (accountRepository.findByNickName(newNickName).isEmpty()) {
+	public ResponseEntity<AccountEntity> putNickName(int id, String newNickName) {
+		Optional<AccountEntity> optionalAccountEntity = accountRepository.findById(id);
+		if (optionalAccountEntity.isEmpty()){
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		} else if(!accountRepository.findByNickName(newNickName).isEmpty()){
+			return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+		} else {
+			AccountEntity accountEntity = optionalAccountEntity.get();
 			accountEntity.setNickName(newNickName);
 			accountRepository.save(accountEntity);
-		} else {
-			System.out.println("Nickname already in use!");
+			return new ResponseEntity<>(accountEntity, HttpStatus.OK);
 		}
 	}
 	
-	public void delAccount(int id, String password) {
-		AccountEntity accountEntity = accountRepository.findById(id);
-		if (accountEntity == null) {
-			System.out.println("The accountEntity doesn't exist!");
-		} else if (accountEntity.getPassword().equals(password)) {
-			accountRepository.delete(accountEntity);
+	public ResponseEntity<AccountEntity> delAccount(int id, String password) {
+		Optional<AccountEntity> optionalAccountEntity = accountRepository.findById(id);
+		if (optionalAccountEntity.isEmpty()){
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else {
-			System.out.println("Password not matching!");
+			AccountEntity accountEntity = optionalAccountEntity.get();
+			if (!accountEntity.getPassword().equals(password)){
+				return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+			} else {
+				accountRepository.deleteById(id);
+				return new ResponseEntity<>(accountEntity, HttpStatus.OK);
+			}
 		}
 	}
 }

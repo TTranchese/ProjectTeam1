@@ -1,8 +1,8 @@
-package it.project1.item;
+package it.project1.inventory;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ItemRepository extends JpaRepository<Item, Long> {
+public interface InventoryRepository extends JpaRepository<Inventory, Long> {
 }
