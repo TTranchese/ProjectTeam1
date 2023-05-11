@@ -1,5 +1,6 @@
 package it.project1.item;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,7 +19,7 @@ public class Item {
     private long id;
     @Column(nullable = false)
     private String name;
-    @Column
+    @Column(nullable = false)
     private String description;
     @Check(constraints = "value > 0")
     @Column(nullable = false)
@@ -33,7 +34,7 @@ public class Item {
     @Column
     @Check(constraints = "durability > 0 AND durability <= 100")
     private int durability;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "is_stackable")
     private boolean isStackable;
     @Column(nullable = false)
     private String type;
@@ -41,4 +42,8 @@ public class Item {
     private String subtype1;
     @Column
     private int subtype2;
+    @JsonProperty(value = "isStackable")
+    public boolean isStackable() {
+        return isStackable;
+    }
 }

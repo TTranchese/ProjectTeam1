@@ -1,5 +1,6 @@
 package it.project1.inventory;
 
+import it.project1.character.CharacterEntity;
 import it.project1.item.Item;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,7 +19,7 @@ public class Inventory {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @ManyToOne
-    private Character character;
+    private CharacterEntity characterEntity;
     @ManyToOne
     private Item item;
     @Column(nullable = false)

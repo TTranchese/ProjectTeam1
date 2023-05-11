@@ -37,8 +37,8 @@ public class ItemController {
         return new ResponseEntity<>(newItem, HttpStatus.CREATED);
     }
 
-    @PutMapping("update/{id}")
-    public ResponseEntity<Item> updateItem(@PathVariable long id, @RequestParam Item item){
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Item> updateItem(@PathVariable long id, @RequestBody(required = false) Item item){
         Optional<Item> existingItem = itemService.getItemById(id);
         if (existingItem.isPresent()) {
             item.setId(id);
