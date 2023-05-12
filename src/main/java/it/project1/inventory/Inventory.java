@@ -1,5 +1,6 @@
 package it.project1.inventory;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import it.project1.character.CharacterEntity;
 import it.project1.item.Item;
 import jakarta.persistence.*;
@@ -29,5 +30,8 @@ public class Inventory {
     private int quantity;
     @Column(nullable = false)
     private  boolean isEquipped;
-
+    @JsonProperty(value = "isEquipped")
+    public boolean isEquipped() {
+        return isEquipped;
+    }
 }
