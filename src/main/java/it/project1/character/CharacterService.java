@@ -8,7 +8,7 @@ import java.util.Optional;
 public class CharacterService {
 	private CharacterRepository characterRepository;
 	
-	public Optional<CharacterEntity> getByCharacterId(Integer id){
+	public Optional<CharacterDTO> getByCharacterId(Integer id){
 		return characterRepository.findById(id);
 	}
 }

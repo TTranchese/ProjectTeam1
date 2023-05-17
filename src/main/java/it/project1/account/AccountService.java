@@ -10,10 +10,10 @@ public class AccountService {
 	@Autowired
 	public AccountRepository accountRepository;
 	
-	public Account getAccountById(int id){
+	public AccountDTO getAccountById(int id){
 		return accountRepository.getById(id);
 	}
-	public List<Account> getListOfAccounts(){
+	public List<AccountDTO> getListOfAccounts(){
 		return accountRepository.findAll();
 	}
 }

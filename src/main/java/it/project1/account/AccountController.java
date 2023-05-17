@@ -13,11 +13,11 @@ public class AccountController {
 	private AccountService accountService;
 	
 	@GetMapping("/")
-	public Account returnById(@RequestParam int id){
+	public AccountDTO returnById(@RequestParam int id){
 		return accountService.getAccountById(id);
 	}
-	@GetMapping("/findall")
-	public List<Account> returnAccounts(){
+	@GetMapping("/findAll")
+	public List<AccountDTO> returnAccounts(){
 		return accountService.getListOfAccounts();
 	}
 }

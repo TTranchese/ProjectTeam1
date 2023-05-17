@@ -16,14 +16,14 @@ public class ItemController {
     private ItemService itemService;
 
     @GetMapping
-    public ResponseEntity<List<Item>> getAllItems(){
-        List<Item> itemList = itemService.getAllItems();
+    public ResponseEntity<List<ItemDTO>> getAllItems(){
+        List<ItemDTO> itemList = itemService.getAllItems();
         return new ResponseEntity<>(itemList, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Item> getItemById(@PathVariable int id) {
-        Optional<Item> item = itemService.getItemById(id);
+    public ResponseEntity<ItemDTO> getItemById(@PathVariable int id) {
+        Optional<ItemDTO> item = itemService.getItemById(id);
         if(item.isPresent()) {
             return new ResponseEntity<>(item.get(), HttpStatus.OK);
         }else {
@@ -32,17 +32,17 @@ public class ItemController {
     }
 
     @PostMapping
-    public ResponseEntity<Item> addItem(@RequestBody Item item){
-        Item newItem = itemService.saveOrUpdateItem(item);
+    public ResponseEntity<ItemDTO> addItem(@RequestBody ItemDTO item){
+        ItemDTO newItem = itemService.saveOrUpdateItem(item);
         return new ResponseEntity<>(newItem, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Item> updateitem(@PathVariable int id, @RequestParam Item item){
-        Optional<Item> existingItem = itemService.getItemById(id);
+    public ResponseEntity<ItemDTO> updateItem(@PathVariable int id, @RequestParam ItemDTO item){
+        Optional<ItemDTO> existingItem = itemService.getItemById(id);
         if (existingItem.isPresent()) {
             item.setId(id);
-            Item updatedItem = itemService.saveOrUpdateItem(item);
+            ItemDTO updatedItem = itemService.saveOrUpdateItem(item);
             return new ResponseEntity<>(updatedItem, HttpStatus.OK);
         }else{
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -51,7 +51,7 @@ public class ItemController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteItemById(@PathVariable int id){
-        Optional<Item> item = itemService.getItemById(id);
+        Optional<ItemDTO> item = itemService.getItemById(id);
         if(item.isPresent()){
             itemService.deleteItem(id);
             return  new ResponseEntity<>(HttpStatus.NO_CONTENT);

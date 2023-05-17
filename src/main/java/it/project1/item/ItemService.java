@@ -12,15 +12,15 @@ public class ItemService {
     @Autowired
     private ItemRepository itemRepository;
 
-    public Item saveOrUpdateItem(Item item) {
+    public ItemDTO saveOrUpdateItem(ItemDTO item) {
         return itemRepository.save(item);
     }
 
-    public Optional<Item> getItemById(int id) {
+    public Optional<ItemDTO> getItemById(int id) {
         return itemRepository.findById(id);
     }
 
-    public List<Item> getAllItems() {
+    public List<ItemDTO> getAllItems() {
         return itemRepository.findAll();
     }
 
