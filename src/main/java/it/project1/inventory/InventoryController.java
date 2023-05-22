@@ -61,5 +61,25 @@ public class InventoryController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
+    @PostMapping("/equip/{characterId}/{itemIndex}")
+    public ResponseEntity<String> equipItem(@PathVariable int characterId, @PathVariable int itemIndex){
+        try{
+            inventoryService.equipItem(characterId, itemIndex);
+            return ResponseEntity.ok("Item equipped successfully.");
+        }catch (IllegalArgumentException e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @PostMapping("/unequip/{characterId}/{itemIndex}")
+    public ResponseEntity<String> unequipItem(@PathVariable int characterId, @PathVariable int itemIndex){
+        try{
+            inventoryService.unequipItem(characterId, itemIndex);
+            return ResponseEntity.ok("Item unequipped successfully.");
+        }catch (IllegalArgumentException e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 }
 

@@ -1,9 +1,7 @@
 package it.project1.character;
 
-import it.project1.account.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -15,12 +13,12 @@ public class CharacterService {
 	@Autowired
 	private CharacterRepository characterRepository;
 	
-	public ResponseEntity<List<CharacterEntity>> getListOfCharacters() {
+	public ResponseEntity<List<Character>> getListOfCharacters() {
 		return new ResponseEntity<>(characterRepository.findAll(), HttpStatus.OK);
 	}
 	
-	public ResponseEntity<CharacterEntity> getById(int id) {
-		Optional<CharacterEntity> optionalCharacterEntity = characterRepository.findById(id);
+	public ResponseEntity<Character> getById(int id) {
+		Optional<Character> optionalCharacterEntity = characterRepository.findById(id);
 		if (optionalCharacterEntity.isEmpty()) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else {
@@ -28,29 +26,29 @@ public class CharacterService {
 		}
 	}
 	
-	public ResponseEntity<List<CharacterEntity>> getByAccountId(int accountId) {
-		Optional<List<CharacterEntity>> optionalCharacterEntityList = characterRepository.findByAccountEntityIdId(accountId);
+	public ResponseEntity<List<Character>> getByAccountId(int accountId) {
+		Optional<List<Character>> optionalCharacterEntityList = characterRepository.findByAccountEntityIdId(accountId);
 		if (optionalCharacterEntityList.isEmpty()) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else {
-			List<CharacterEntity> characterEntityList = optionalCharacterEntityList.get();
-			return new ResponseEntity<>(characterEntityList, HttpStatus.FOUND);
+			List<Character> characterList = optionalCharacterEntityList.get();
+			return new ResponseEntity<>(characterList, HttpStatus.FOUND);
 		}
 	}
 	
-	public ResponseEntity<CharacterEntity> postCharacter(CharacterEntity characterEntity) {
-		if (characterEntity == null) {
+	public ResponseEntity<Character> postCharacter(Character character) {
+		if (character == null) {
 			return new ResponseEntity<>(HttpStatus.FORBIDDEN);
-		} else if (characterRepository.findByName(characterEntity.getName()).isPresent()) {
+		} else if (characterRepository.findByName(character.getName()).isPresent()) {
 			return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
 		} else {
-			characterRepository.save(characterEntity);
-			return new ResponseEntity<>(characterEntity, HttpStatus.CREATED);
+			characterRepository.save(character);
+			return new ResponseEntity<>(character, HttpStatus.CREATED);
 		}
 	}
 	
-	public ResponseEntity<CharacterEntity> delCharacter(int id, String password){
-		Optional<CharacterEntity> optionalCharacterEntity = characterRepository.findById(id);
+	public ResponseEntity<Character> delCharacter(int id, String password){
+		Optional<Character> optionalCharacterEntity = characterRepository.findById(id);
 		if (optionalCharacterEntity.isEmpty()){
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else if (!optionalCharacterEntity.get().getAccountEntityId().getPassword().equals(password)) {
@@ -60,12 +58,12 @@ public class CharacterService {
 			return new ResponseEntity<>(HttpStatus.OK);
 		}
 	}
-	public ResponseEntity<CharacterEntity> putCharacter(CharacterEntity characterEntity){
-		Optional<CharacterEntity> optionalCharacterEntity = characterRepository.findById(characterEntity.getId());
+	public ResponseEntity<Character> putCharacter(Character character){
+		Optional<Character> optionalCharacterEntity = characterRepository.findById(character.getId());
 		if (optionalCharacterEntity.isEmpty()){
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else {
-			characterRepository.save(characterEntity);
+			characterRepository.save(character);
 			return new ResponseEntity<>(HttpStatus.OK);
 		}
 	}
