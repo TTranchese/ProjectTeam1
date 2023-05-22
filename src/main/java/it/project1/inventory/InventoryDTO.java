@@ -1,13 +1,13 @@
 package it.project1.inventory;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import it.project1.character.CharacterEntity;
+import it.project1.character.Character;
 import it.project1.item.Item;
 
 public class InventoryDTO {
 
     private long id;
-    private CharacterEntity characterEntity;
+    private Character character;
     private Item item;
     private int slot;
     private int quantity;
@@ -18,9 +18,9 @@ public class InventoryDTO {
         return isEquipped;
     }
 
-    public InventoryDTO(long id, CharacterEntity characterEntity, Item item, int slot, int quantity, boolean isEquipped) {
+    public InventoryDTO(long id, Character character, Item item, int slot, int quantity, boolean isEquipped) {
         this.id = id;
-        this.characterEntity = characterEntity;
+        this.character = character;
         this.item = item;
         this.slot = slot;
         this.quantity = quantity;
@@ -37,12 +37,12 @@ public class InventoryDTO {
         this.id = id;
     }
 
-    public CharacterEntity getCharacterEntity() {
-        return characterEntity;
+    public Character getCharacterEntity() {
+        return character;
     }
 
-    public void setCharacterEntity(CharacterEntity characterEntity) {
-        this.characterEntity = characterEntity;
+    public void setCharacterEntity(Character character) {
+        this.character = character;
     }
 
     public Item getItem() {

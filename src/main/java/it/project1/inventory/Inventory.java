@@ -1,7 +1,7 @@
 package it.project1.inventory;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import it.project1.character.CharacterEntity;
+import it.project1.character.Character;
 import it.project1.item.Item;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -20,7 +20,7 @@ public class Inventory {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @ManyToOne
-    private CharacterEntity characterEntity;
+    private Character character;
     @ManyToOne
     private Item item;
     @Column(nullable = false)
