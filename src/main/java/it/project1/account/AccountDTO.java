@@ -4,11 +4,8 @@ package it.project1.account;
 import jakarta.annotation.Nonnull;
 
 public class AccountDTO {
-    @Nonnull
     private int id;
-    @Nonnull
     private String nickName;
-    @Nonnull
     private String password;
 
     public AccountDTO() {
