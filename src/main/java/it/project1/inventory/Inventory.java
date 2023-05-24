@@ -1,13 +1,13 @@
 package it.project1.inventory;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import it.project1.character.Character;
 import it.project1.item.Item;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Check;
+
+import java.util.List;
 
 @Entity
 @Table
@@ -17,21 +17,12 @@ import org.hibernate.annotations.Check;
 public class Inventory {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @ManyToOne
+    @OneToOne
     private Character character;
-    @ManyToOne
-    private Item item;
-    @Column(nullable = false)
-    @Check(constraints = "slot > 0")
-    private int slot;
+    @OneToMany
+    private List<Item> item;
     @Column
-    private int quantity;
-    @Column(nullable = false)
-    private  boolean isEquipped;
-    @JsonProperty(value = "isEquipped")
-    public boolean isEquipped() {
-        return isEquipped;
-    }
+    private int weight;
 }
