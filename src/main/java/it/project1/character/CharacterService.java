@@ -51,7 +51,7 @@ public class CharacterService {
 		Optional<Character> optionalCharacterEntity = characterRepository.findById(id);
 		if (optionalCharacterEntity.isEmpty()){
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-		} else if (!optionalCharacterEntity.get().getAccountEntityId().getPassword().equals(password)) {
+		} else if (!optionalCharacterEntity.get().getAccountId().getPassword().equals(password)) {
 			return new ResponseEntity<>(HttpStatus.FORBIDDEN);
 		} else {
 			characterRepository.deleteById(id);

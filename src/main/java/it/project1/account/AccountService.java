@@ -1,6 +1,5 @@
 package it.project1.account;
 
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,44 +14,44 @@ public class AccountService {
 	@Autowired
 	public AccountRepository accountRepository;
 	
-	public ResponseEntity<AccountEntity> findById(int id) {
-		Optional<AccountEntity> optionalAccountEntity = accountRepository.findById(id);
+	public ResponseEntity<Account> findById(int id) {
+		Optional<Account> optionalAccountEntity = accountRepository.findById(id);
 		if (optionalAccountEntity.isEmpty()){
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else{
-			AccountEntity accountEntity = optionalAccountEntity.get();
-			return new ResponseEntity<>(accountEntity, HttpStatus.FOUND);
+			Account account = optionalAccountEntity.get();
+			return new ResponseEntity<>(account, HttpStatus.FOUND);
 		}
 	}
 	
-	public ResponseEntity<List<AccountEntity>> findAll() {
+	public ResponseEntity<List<Account>> findAll() {
 		return new ResponseEntity<>(accountRepository.findAll(), HttpStatus.FOUND);
 	}
 	
-	public ResponseEntity<AccountEntity> postNewAccount(String nickName, String password) {
-		AccountEntity accountEntity = new AccountEntity();
-		accountEntity.setNickName(nickName);
-		accountEntity.setPassword(password);
-		List<AccountEntity> accountEntityList = accountRepository.findByNickName(nickName);
-		if (accountEntityList.isEmpty()) {
-			accountRepository.save(accountEntity);
-			return new ResponseEntity<>(accountEntity, HttpStatus.CREATED);
+	public ResponseEntity<Account> postNewAccount(String nickName, String password) {
+		Account account = new Account();
+		account.setNickName(nickName);
+		account.setPassword(password);
+		List<Account> accountList = accountRepository.findByNickName(nickName);
+		if (accountList.isEmpty()) {
+			accountRepository.save(account);
+			return new ResponseEntity<>(account, HttpStatus.CREATED);
 		} else {
-			return new ResponseEntity<>(accountEntity, HttpStatus.NOT_ACCEPTABLE);
+			return new ResponseEntity<>(account, HttpStatus.NOT_ACCEPTABLE);
 		}
 		
 	}
 	
-	public ResponseEntity<AccountEntity> putPassword(int id, String oldPassword, String newPassword) {
-		Optional<AccountEntity> optionalAccountEntity = accountRepository.findById(id);
+	public ResponseEntity<Account> putPassword(int id, String oldPassword, String newPassword) {
+		Optional<Account> optionalAccountEntity = accountRepository.findById(id);
 		if (optionalAccountEntity.isEmpty()){
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else {
-			AccountEntity accountEntity = optionalAccountEntity.get();
-			if(accountEntity.getPassword().equals(oldPassword)){
-				accountEntity.setPassword(newPassword);
-				accountRepository.save(accountEntity);
-				return new ResponseEntity<>(accountEntity, HttpStatus.OK);
+			Account account = optionalAccountEntity.get();
+			if(account.getPassword().equals(oldPassword)){
+				account.setPassword(newPassword);
+				accountRepository.save(account);
+				return new ResponseEntity<>(account, HttpStatus.OK);
 			} else {
 				return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
 			}
@@ -60,31 +59,31 @@ public class AccountService {
 		
 	}
 	
-	public ResponseEntity<AccountEntity> putNickName(int id, String newNickName) {
-		Optional<AccountEntity> optionalAccountEntity = accountRepository.findById(id);
+	public ResponseEntity<Account> putNickName(int id, String newNickName) {
+		Optional<Account> optionalAccountEntity = accountRepository.findById(id);
 		if (optionalAccountEntity.isEmpty()){
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else if(!accountRepository.findByNickName(newNickName).isEmpty()){
 			return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
 		} else {
-			AccountEntity accountEntity = optionalAccountEntity.get();
-			accountEntity.setNickName(newNickName);
-			accountRepository.save(accountEntity);
-			return new ResponseEntity<>(accountEntity, HttpStatus.OK);
+			Account account = optionalAccountEntity.get();
+			account.setNickName(newNickName);
+			accountRepository.save(account);
+			return new ResponseEntity<>(account, HttpStatus.OK);
 		}
 	}
 	
-	public ResponseEntity<AccountEntity> delAccount(int id, String password) {
-		Optional<AccountEntity> optionalAccountEntity = accountRepository.findById(id);
+	public ResponseEntity<Account> delAccount(int id, String password) {
+		Optional<Account> optionalAccountEntity = accountRepository.findById(id);
 		if (optionalAccountEntity.isEmpty()){
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else {
-			AccountEntity accountEntity = optionalAccountEntity.get();
-			if (!accountEntity.getPassword().equals(password)){
+			Account account = optionalAccountEntity.get();
+			if (!account.getPassword().equals(password)){
 				return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
 			} else {
 				accountRepository.deleteById(id);
-				return new ResponseEntity<>(accountEntity, HttpStatus.OK);
+				return new ResponseEntity<>(account, HttpStatus.OK);
 			}
 		}
 	}
