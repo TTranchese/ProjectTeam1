@@ -1,8 +1,13 @@
 package it.project1.character;
 
+import it.project1.account.AccountDTO;
+import it.project1.inventory.InventoryDTO;
+
 public class CharacterDTO {
+
     private int id;
-    private int accountId;
+    private AccountDTO account;
+    private InventoryDTO inventory;
     private String name;
     private int level;
     private String job;
@@ -11,9 +16,10 @@ public class CharacterDTO {
     public CharacterDTO() {
     }
 
-    public CharacterDTO(int id, int accountId, String name, int level, String job, char gender) {
+    public CharacterDTO(int id, AccountDTO account, InventoryDTO inventory, String name, int level, String job, char gender) {
         this.id = id;
-        this.accountId = accountId;
+        this.account = account;
+        this.inventory = inventory;
         this.name = name;
         this.level = level;
         this.job = job;
@@ -28,12 +34,20 @@ public class CharacterDTO {
         this.id = id;
     }
 
-    public int getAccountId() {
-        return accountId;
+    public AccountDTO getAccount() {
+        return account;
     }
 
-    public void setAccountId(int accountId) {
-        this.accountId = accountId;
+    public void setAccount(AccountDTO account) {
+        this.account = account;
+    }
+
+    public InventoryDTO getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(InventoryDTO inventory) {
+        this.inventory = inventory;
     }
 
     public String getName() {

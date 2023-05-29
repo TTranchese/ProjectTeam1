@@ -1,7 +1,8 @@
 package it.project1.item;
 
 public class ItemDTO {
-    private int id;
+
+    private long id;
     private String name;
     private String description;
     private int value;
@@ -10,14 +11,16 @@ public class ItemDTO {
     private int requirements;
     private int durability;
     private boolean isStackable;
-    private String type;
-    private String subtype1;
+    private int quantity;
+    private boolean isEquipped;
+    private ItemType type;
+    private ItemSubtype subtype1;
     private int subtype2;
 
     public ItemDTO() {
     }
 
-    public ItemDTO(int id, String name, String description, int value, int weight, String rarity, int requirements, int durability, boolean isStackable, String type, String subtype1, int subtype2) {
+    public ItemDTO(long id, String name, String description, int value, int weight, String rarity, int requirements, int durability, boolean isStackable, int quantity, boolean isEquipped, ItemType type, ItemSubtype subtype1, int subtype2) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -27,16 +30,18 @@ public class ItemDTO {
         this.requirements = requirements;
         this.durability = durability;
         this.isStackable = isStackable;
+        this.quantity = quantity;
+        this.isEquipped = isEquipped;
         this.type = type;
         this.subtype1 = subtype1;
         this.subtype2 = subtype2;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -104,19 +109,35 @@ public class ItemDTO {
         isStackable = stackable;
     }
 
-    public String getType() {
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public boolean isEquipped() {
+        return isEquipped;
+    }
+
+    public void setEquipped(boolean equipped) {
+        isEquipped = equipped;
+    }
+
+    public ItemType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(ItemType type) {
         this.type = type;
     }
 
-    public String getSubtype1() {
+    public ItemSubtype getSubtype1() {
         return subtype1;
     }
 
-    public void setSubtype1(String subtype1) {
+    public void setSubtype1(ItemSubtype subtype1) {
         this.subtype1 = subtype1;
     }
 
