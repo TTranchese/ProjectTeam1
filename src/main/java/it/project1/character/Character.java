@@ -2,6 +2,7 @@ package it.project1.character;
 
 
 import it.project1.account.Account;
+import it.project1.inventory.Inventory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,7 +20,7 @@ public class Character {
 	private int id;
 	@ManyToOne
 	@JoinColumn(name = "account_id")
-  private Account accountId;
+  	private Account accountId;
 	@OneToOne
 	private Inventory inventory;
 	@Column(unique = true, nullable = false)

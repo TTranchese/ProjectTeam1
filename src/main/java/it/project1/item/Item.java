@@ -47,10 +47,12 @@ public class Item {
     public boolean isEquipped() {
         return isEquipped;
     }
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String type;
-    @Column
-    private String subtype1;
+    private ItemType type;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private ItemSubtype subtype1;
     @Column
     private int subtype2;
     @JsonProperty(value = "isStackable")
