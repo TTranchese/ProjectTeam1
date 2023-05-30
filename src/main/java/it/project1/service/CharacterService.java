@@ -1,5 +1,7 @@
-package it.project1.character;
+package it.project1.service;
 
+import it.project1.entities.Character;
+import it.project1.repository.CharacterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

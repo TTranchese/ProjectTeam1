@@ -1,8 +1,6 @@
-package it.project1.character;
+package it.project1.entities;
 
 
-import it.project1.account.Account;
-import it.project1.inventory.Inventory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

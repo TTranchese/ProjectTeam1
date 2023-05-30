@@ -1,4 +1,4 @@
-package it.project1.inventory;
+package it.project1.old_structure;
 
 /*import java.sql.*;
 

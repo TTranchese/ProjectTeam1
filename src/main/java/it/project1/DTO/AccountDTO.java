@@ -1,5 +1,5 @@
 
-package it.project1.account;
+package it.project1.DTO;
 
 import jakarta.annotation.Nonnull;
 

@@ -1,5 +1,7 @@
-package it.project1.account;
+package it.project1.service;
 
+import it.project1.entities.Account;
+import it.project1.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

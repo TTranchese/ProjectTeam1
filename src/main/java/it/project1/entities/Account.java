@@ -1,4 +1,4 @@
-package it.project1.account;
+package it.project1.entities;
 
 
 import jakarta.persistence.*;

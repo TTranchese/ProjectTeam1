@@ -1,7 +1,4 @@
-package it.project1.character;
-
-import it.project1.account.AccountDTO;
-import it.project1.inventory.InventoryDTO;
+package it.project1.DTO;
 
 public class CharacterDTO {
 

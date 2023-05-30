@@ -1,9 +1,6 @@
-package it.project1.inventory;
+package it.project1.DTO;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import it.project1.character.Character;
-import it.project1.item.Item;
-import it.project1.item.ItemDTO;
+import it.project1.entities.Character;
 
 import java.util.List;
 

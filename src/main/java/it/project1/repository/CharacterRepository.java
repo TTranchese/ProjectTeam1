@@ -1,5 +1,6 @@
-package it.project1.character;
+package it.project1.repository;
 
+import it.project1.entities.Character;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

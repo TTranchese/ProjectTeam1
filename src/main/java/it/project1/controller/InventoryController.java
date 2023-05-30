@@ -1,6 +1,7 @@
-package it.project1.inventory;
+package it.project1.controller;
 
-import org.apache.coyote.Response;
+import it.project1.entities.Inventory;
+import it.project1.service.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
