@@ -1,8 +1,6 @@
-package it.project1.character;
+package it.project1.entities;
 
 
-import it.project1.account.Account;
-import it.project1.inventory.Inventory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class Character {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	@ManyToOne
 	@JoinColumn(name = "account_id")
   	private Account accountId;

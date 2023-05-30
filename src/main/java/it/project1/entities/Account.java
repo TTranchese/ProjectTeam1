@@ -1,4 +1,4 @@
-package it.project1.account;
+package it.project1.entities;
 
 
 import jakarta.persistence.*;
@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class Account {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	@Column(unique = true, nullable = false)
 	private String nickName;
 	@Column(nullable = false)

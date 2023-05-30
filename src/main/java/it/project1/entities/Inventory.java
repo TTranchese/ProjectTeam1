@@ -1,7 +1,5 @@
-package it.project1.inventory;
+package it.project1.entities;
 
-import it.project1.character.Character;
-import it.project1.item.Item;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,7 +16,7 @@ public class Inventory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     @OneToOne
     private Character character;
     @OneToMany

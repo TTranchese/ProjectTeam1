@@ -1,5 +1,7 @@
-package it.project1.item;
+package it.project1.controller;
 
+import it.project1.entities.Item;
+import it.project1.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

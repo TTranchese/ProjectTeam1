@@ -1,5 +1,7 @@
-package it.project1.item;
+package it.project1.service;
 
+import it.project1.entities.Item;
+import it.project1.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

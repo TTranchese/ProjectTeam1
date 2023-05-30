@@ -1,4 +1,7 @@
-package it.project1.item;
+package it.project1.DTO;
+
+import it.project1.enums.ItemSubtype;
+import it.project1.enums.ItemType;
 
 public class ItemDTO {
 

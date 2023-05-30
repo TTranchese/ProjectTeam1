@@ -1,7 +1,8 @@
-package it.project1.item;
+package it.project1.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import it.project1.inventory.Inventory;
+import it.project1.enums.ItemSubtype;
+import it.project1.enums.ItemType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,7 +18,7 @@ public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     @OneToOne(mappedBy = "item")
     private Inventory inventory;
     @Column(nullable = false)
