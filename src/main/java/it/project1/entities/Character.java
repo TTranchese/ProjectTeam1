@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class Character {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	@ManyToOne
 	@JoinColumn(name = "account_id")
   	private Account accountId;

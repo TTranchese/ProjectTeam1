@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface CharacterRepository extends JpaRepository<Character, Integer> {
+public interface CharacterRepository extends JpaRepository<Character, Long> {
 	Optional<List<Character>> findByAccountEntityIdId(int accountId);
 	Optional<Character> findByName(String name);
 }
